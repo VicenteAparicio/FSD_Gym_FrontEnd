@@ -1,0 +1,37 @@
+
+#footerJungle{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(0, 68, 68);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em 0;
+}
+#logoFooter{
+    width: 450vmax;
+    max-width: 18em;
+    min-width: 5em;
+}
+#avpuertoFooter{
+    width: 20vmax;
+    max-width: 16em;
+}
+#ruzafaFooter{
+    width: 15vmax;
+    max-width: 12em;
+}
+.imgLocalFooter{
+    margin: 2em 0;
+}
+
+
+@media (max-width: 950px) {
+    #footerJungle{
+        flex-direction: column;
+    }
+}
