@@ -7,3 +7,9 @@ nav{
     padding: .6em 2em;
     width: 100%;
 }
+
+@media (max-width: 950px) {
+    nav{
+        justify-content: center;
+    }
+}
