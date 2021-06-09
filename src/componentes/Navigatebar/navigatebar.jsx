@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import {useHistory} from 'react-router-dom';
 import '../../assets/fontcolors.css';
 import './navigatebar.css';
@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div id="navbar">
             <div id="desplegable" >
-                <img id="menu" src={menu} class="fas fa-bars" onclick=""/>
+                <img id="menu" src={menu} alt="Menu container" onClick=""/>
                 <ul id="navLinkBox" class="linksContainer norwester txtWhite" >
                     <li><div className="navLinkText norwester" target="_self" to="/">INICIO</div></li>
                     <li><div className="navLinkText norwester" target="_self" to="/coach">¿QUIÉNES SOMOS?</div></li>

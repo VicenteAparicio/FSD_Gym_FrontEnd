@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Partner01 from '../../assets/logos/partner01.png';
 import Partner02 from '../../assets/logos/partner02.png';
 import Partner03 from '../../assets/logos/partner03.png';
+
 import '../../assets/fontcolors.css';
 import './footerbottom.css';
 

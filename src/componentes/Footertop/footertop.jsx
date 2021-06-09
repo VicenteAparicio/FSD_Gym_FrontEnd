@@ -10,9 +10,9 @@ import './footertop.css';
 const Footertop = () => {
     return (
         <div id="footerJungle" style={{backgroundImage: `url(${footerTopBack})`}}>
-            <img id="ruzafaFooter" class="imgLocalFooter" src={Footertop01} alt="Logo Ruzafa"/>
+            <img id="ruzafaFooter" className="imgLocalFooter" src={Footertop01} alt="Logo Ruzafa"/>
             <img id="logoFooter" src={Footertop02} alt="Logotipo Crosstraining Valencia" title="Crosstraining Valencia"/>
-            <img id="avpuertoFooter" class="imgLocalFooter" src={Footertop03} alt="Logo Av. Puerto"/>
+            <img id="avpuertoFooter" className="imgLocalFooter" src={Footertop03} alt="Logo Av. Puerto"/>
         </div>
     )
 }

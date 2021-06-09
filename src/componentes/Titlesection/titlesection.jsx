@@ -5,9 +5,9 @@ import './titlesection.css';
 const Titlesection = (props) => {
 
     return (
-        <div class="titleBar">
-            <div class="title01 txtBlack norwester">{props.title}</div>
-            <div class="greenBar bgGreen"></div>
+        <div className="titleBar">
+            <div className="title01 txtBlack norwester">{props.title}</div>
+            <div className="greenBar bgGreen"></div>
         </div>
     )
 }

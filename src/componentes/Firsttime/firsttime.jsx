@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import '../../assets/fontcolors.css';
+
 import './firsttime.css';
 
-const Firsttime = (props) => {
+const Firsttime = () => {
 
     return (
         <div id="topper" className="bgGreen">

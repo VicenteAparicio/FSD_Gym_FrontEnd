@@ -1,4 +1,5 @@
 import React from 'react';
+
 import '../../assets/fontcolors.css';
 import './footermiddle.css';
 
