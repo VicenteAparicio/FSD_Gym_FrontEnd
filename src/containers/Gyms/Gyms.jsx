@@ -31,6 +31,7 @@ const Profile = () => {
 
         try{
 
+            
             let res = await axios.get('http://localhost:3005/gym/all_gyms');
 
             setUsers(res.data.results);
