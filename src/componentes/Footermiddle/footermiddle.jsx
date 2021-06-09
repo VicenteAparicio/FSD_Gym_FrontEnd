@@ -5,15 +5,15 @@ import './footermiddle.css';
 const Footermiddle = () => {
     let mail = "CROSSTRAININGVLC@GMAIL.COM";
     return (
-        <div id="footerText" class="bgGreen dinC">
+        <div id="footerText" className="bgGreen dinC txtWhite">
             <div id="leftText">
-                <div clasName="titleFooter">DÓNDE ESTAMOS?</div>
-                <div clasName="infoFooter">CROSSTRAINING VALENCIA - RUZAFA</div>
-                <div clasName="subInfoFooter">C/ PERE III EL GRAN, 32, BAJO</div>
-                <div clasName="subInfoFooter">46005 - VALENCIA</div>
-                <div clasName="infoFooter">CROSSTRAINING VALENCIA - AV. PUERTO</div>
-                <div clasName="subInfoFooter">AVENIDA DEL PUERTO, 47</div>
-                <div clasName="subInfoFooter">46021 - VALENCIA</div>
+                <div className="titleFooter">DÓNDE ESTAMOS?</div>
+                <div className="infoFooter">CROSSTRAINING VALENCIA - RUZAFA</div>
+                <div className="subInfoFooter">C/ PERE III EL GRAN, 32, BAJO</div>
+                <div className="subInfoFooter">46005 - VALENCIA</div>
+                <div className="infoFooter">CROSSTRAINING VALENCIA - AV. PUERTO</div>
+                <div className="subInfoFooter">AVENIDA DEL PUERTO, 47</div>
+                <div className="subInfoFooter">46021 - VALENCIA</div>
             </div>
 
             <div id="rightText">

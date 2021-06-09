@@ -37,6 +37,7 @@
     font-size: 1.2em;
     letter-spacing: .15em;
     word-spacing: .1em;
+    line-height: .1em;
     margin: 1em 0 .5em 0;
 }
 .subInfoFooter{
@@ -45,6 +46,7 @@
     letter-spacing: .15em;
     word-spacing: .1em;
     margin-left: 1em;
+    
 }
 
 
