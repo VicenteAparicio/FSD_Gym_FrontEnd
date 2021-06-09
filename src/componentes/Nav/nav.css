@@ -1,0 +1,9 @@
+nav{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .6em 2em;
+    width: 100%;
+}

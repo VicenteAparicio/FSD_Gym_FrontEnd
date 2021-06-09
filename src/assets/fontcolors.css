@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Norwester';
+    src: url('./fonts/Norwester-Accents.woff');
+}
+@font-face {
+    font-family: 'Din Condensed';
+    src: url('./fonts/D-DINCondensed-Bold.ttf');
+}
+@font-face { 
+    font-family: 'ironman';
+    src: url('./fonts/ironman.ttf');
+}
+/* COLOR SETS */
+.bgGreen{
+    background-color: rgb(34, 180, 177);
+}
+.bgBlack{
+    background-color: black;
+}
+.txtBlack{
+    color: black;
+}
+.txtWhite{
+    color: white;
+}
+.txtGreen{
+    color: rgb(34, 180, 177);
+}
+/* TIPOGRAFIAS */
+.norwester{
+    font-family: 'Norwester';
+}
+.dinC{
+    font-family: 'DIN Condensed';
+}
+.ironman{
+    font-family: 'ironman';
+}

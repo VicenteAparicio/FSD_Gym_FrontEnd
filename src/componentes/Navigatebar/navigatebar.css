@@ -1,0 +1,25 @@
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+
+}
+.linksContainer{
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; 
+    z-index: 3;
+}
+.linksContainer li{
+    all: unset;
+    margin-left: 2em;
+}
+
+.navLinkText{
+    font-size: 1.5em;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
