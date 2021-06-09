@@ -60,6 +60,14 @@
     z-index: 1;
 }
 
+.title02{
+    font-size: 5em;
+    letter-spacing: .01em;
+    line-height: .8;
+    width: 100%;
+    z-index: 2;
+}
+
 /* SECTIONS */
 .sections{
     display: flex;
@@ -74,5 +82,8 @@
     }
     .title01{
         line-height: .8em;
+    }
+    .title02{
+        font-size: 6vmax;
     }
 }

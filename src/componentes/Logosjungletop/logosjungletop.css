@@ -1,0 +1,19 @@
+.localBoxTop{
+    display: flex;
+    justify-content: center;
+}
+.localBoxTop:first-child{
+    box-sizing: border-box;
+    padding: .5em 3em .5em 0;
+    border-right: .25em solid white;
+}
+#ruzafaJungleTop{
+    height: 5vmax;
+    max-height: 4em;
+    margin-top: .8em;
+}
+#puertoJungleTop{
+    height: 4vmax;
+    max-height: 3.5em;
+    margin: 1.2em 0 0 3em;
+}

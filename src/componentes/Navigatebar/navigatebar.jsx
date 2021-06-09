@@ -11,7 +11,7 @@ const Navbar = () => {
                 <img id="menu" src={menu} alt="Menu container" onClick=""/>
                 <ul id="navLinkBox" class="linksContainer norwester txtWhite" >
                     <li><div className="navLinkText norwester" target="_self" to="/">INICIO</div></li>
-                    <li><div className="navLinkText norwester" target="_self" to="/coach">¿QUIÉNES SOMOS?</div></li>
+                    <li><div className="navLinkText norwester" target="_self" to="/who">¿QUIÉNES SOMOS?</div></li>
                     <li><div className="navLinkText norwester" target="_self" to="/forme" >¿ES CROSSTRAINING PARA MÍ?</div></li> 
                     <li><div className="navLinkText norwester" target="_self" to="/agenda">HORARIOS Y CLASES</div></li>
                     <li><div className="navLinkText norwester" target="_self" to="/prices">TARIFAS</div></li>

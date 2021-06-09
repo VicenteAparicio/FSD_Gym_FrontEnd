@@ -5,6 +5,8 @@ import Home from './containers/Home/home';
 import Coach from './containers/Coach/coach';
 import Header from './componentes/Header/header';
 import Footer from './componentes/Footer/footer';
+import Who from './containers/Who/who';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}></Route>
           <Route path="/coach" exact component={Coach}></Route>
+          <Route path="/who" exact component={Who}></Route>
         </Switch>
       </BrowserRouter>
       <Footer/>

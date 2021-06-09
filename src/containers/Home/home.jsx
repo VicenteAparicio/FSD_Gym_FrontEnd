@@ -3,6 +3,7 @@ import React from 'react';
 
 import Topjungle from '../../componentes/Topjungle/topjungle';
 import Titlesection from '../../componentes/Titlesection/titlesection';
+import Midbanner from '../../componentes/Midbanner/midbanner';
 
 import '../../assets/fontcolors.css';
 import './home.css';
@@ -10,8 +11,9 @@ import './home.css';
 const Home = () => {
     return (
         <section id="home" className="sections">
-            <Topjungle/>
+            <Topjungle title="PONTE EN FORMA CON NOSOTROS"/>
             <Titlesection title="CONSIGUE TU MEJOR VERSIÓN"/>
+            <Midbanner/>
         </section>
     )
 }
