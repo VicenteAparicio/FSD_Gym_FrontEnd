@@ -7,8 +7,6 @@ const Button = (props) => {
 
     let history = useHistory();
 
-
-
     const Vamos = () => {
         if (props.llevame !== "") {
             history.push(props.llevame);
