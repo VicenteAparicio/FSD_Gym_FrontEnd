@@ -5,7 +5,7 @@ import Nav from '../Nav/nav';
 
 import './header.css';
 
-const Header = (props) => {
+const Header = () => {
 
     return (
         <header>

@@ -11,7 +11,7 @@ const Navbar = () => {
         <div id="navbar">
             <div id="desplegable" >
                 <img id="menu" src={menu} alt="Menu container" onClick=""/>
-                <ul id="navLinkBox" class="linksContainer norwester txtWhite" >
+                <ul id="navLinkBox" className="linksContainer norwester txtWhite" >
                     <li><Link to="/" name="INICIO"/></li>
                     <li><Link to="/who" name="¿QUIÉNES SOMOS?"/></li>
                     <li><Link to="/forme" name="¿ES CROSSTRAINING PARA MÍ?"/></li> 

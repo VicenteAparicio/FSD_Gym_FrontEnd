@@ -1,0 +1,20 @@
+
+
+
+.vistaLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chocolate;
+    width: 100%;
+}
+
+.loginCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20em;
+    background-color: brown;
+    color: white;
+}

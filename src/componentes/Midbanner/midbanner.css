@@ -34,3 +34,23 @@
     border-color: rgba(34, 180, 177, .8) transparent transparent transparent;
     z-index: 1;
 }
+
+
+
+@media (max-width: 950px) {
+    /* MIDDLE */
+    #leftMiddle{
+        box-sizing: border-box;
+        align-items: center;
+        width: 100%;
+        padding: 3em 2em;
+    }
+    .textoMiddle{
+        font-size: 1em;
+        width: 100%;
+    }
+    #triangle{
+        display: none;
+    }
+
+}

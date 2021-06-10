@@ -1,0 +1,15 @@
+.greenBarTitleContainer{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin:  0 0 16vmax 0;
+    cursor: pointer;
+}
+.greenBarTitle{
+    text-align: center;
+    font-size: 2em;
+    padding: .3em 0;
+    width: 40vmax;
+}
