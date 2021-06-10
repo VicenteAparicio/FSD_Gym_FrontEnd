@@ -8,6 +8,8 @@ import Footer from './componentes/Footer/footer';
 import Who from './containers/Who/who';
 import Login from './containers/Login/login';
 import Logcoach from './containers/Logroles/Logcoach/logcoach';
+import Logadmin from './containers/Logroles/Logadmin/logadmin';
+import Loguser from './containers/Logroles/Loguser/loguser';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/who" exact component={Who}></Route>
           <Route path="/login" exact component={Login}></Route>
           <Route path="/logcoach" exact component={Logcoach}></Route>
+          <Route path="/logadmin" exact component={Logadmin}></Route>
+          <Route path="/logadmin" exact component={Loguser}></Route>
         </Switch>
       </BrowserRouter>
       <Footer/>
