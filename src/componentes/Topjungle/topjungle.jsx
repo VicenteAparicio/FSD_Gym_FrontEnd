@@ -15,7 +15,7 @@ const Topjungle = (props) => {
             <div id="leftJungleTop">
                 <img id="logoTop" src={Logofull}  alt="Logotipo Crosstraining Valencia" title="Crosstraining Valencia"/>
             </div>
-            <Rjungletop title={props.title}/>
+            <Rjungletop id={props.id} title={props.title}/>
         </div>
     )
 }

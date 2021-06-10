@@ -1,8 +1,10 @@
 import React from 'react';
-// import {useHistory} from 'react-router-dom';
+
+import Link from '../Link/link';
+import menu from '../../assets/logos/menu.png';
+
 import '../../assets/fontcolors.css';
 import './navigatebar.css';
-import menu from '../../assets/logos/menu.png';
 
 const Navbar = () => {
     return (
@@ -10,12 +12,12 @@ const Navbar = () => {
             <div id="desplegable" >
                 <img id="menu" src={menu} alt="Menu container" onClick=""/>
                 <ul id="navLinkBox" class="linksContainer norwester txtWhite" >
-                    <li><div className="navLinkText norwester" target="_self" to="/">INICIO</div></li>
-                    <li><div className="navLinkText norwester" target="_self" to="/who">¿QUIÉNES SOMOS?</div></li>
-                    <li><div className="navLinkText norwester" target="_self" to="/forme" >¿ES CROSSTRAINING PARA MÍ?</div></li> 
-                    <li><div className="navLinkText norwester" target="_self" to="/agenda">HORARIOS Y CLASES</div></li>
-                    <li><div className="navLinkText norwester" target="_self" to="/prices">TARIFAS</div></li>
-                    <li><div className="navLinkText norwester" target="_self" to="/contact">CONTACTO</div></li>
+                    <li><Link to="/" name="INICIO"/></li>
+                    <li><Link to="/who" name="¿QUIÉNES SOMOS?"/></li>
+                    <li><Link to="/forme" name="¿ES CROSSTRAINING PARA MÍ?"/></li> 
+                    <li><Link to="/agenda" name="HORARIOS Y CLASES"/></li>
+                    <li><Link to="/prices" name="TARIFAS"/></li>
+                    <li><Link to="/contact" name="CONTACTO"/></li>
                 </ul>
             </div>
         </div>
