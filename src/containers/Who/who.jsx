@@ -11,7 +11,7 @@ import './who.css';
 const Who = () => {
     return (
         <section className="sections"> 
-            <Topjungle title="¿QUIÉNES SOMOS?"/> 
+            <Topjungle id="hide" title="¿QUIÉNES SOMOS?"/> 
             <Titlesection title="NUESTRO EQUIPO"/>
         </section>
     )

@@ -11,13 +11,10 @@
     line-height: .8;
     text-align: center;
 }
-#boxLocalesJungleTop{
+.boxLocalesJungleTop{
     display: flex;
     flex-direction: row;
     align-self: center;
     margin-top: 1.5em;
 }
 
-#hide {
-    display: none;
-}

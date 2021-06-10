@@ -11,7 +11,7 @@ import './home.css';
 const Home = () => {
     return (
         <section id="home" className="sections">
-            <Topjungle id="hide" title="PONTE EN FORMA CON NOSOTROS"/>
+            <Topjungle title="PONTE EN FORMA CON NOSOTROS"/>
             <Titlesection title="CONSIGUE TU MEJOR VERSIÓN"/>
             <Midbanner/>
         </section>

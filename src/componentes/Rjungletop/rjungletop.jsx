@@ -10,9 +10,9 @@ const Rjungletop = (props) => {
     return (
         <div id="rightJungleTop">
             <div id="textoBoxHome">
-                <div id={props.id} className="textoJungleTop txtWhite norwester">{props.title}</div>
+                <div className="textoJungleTop txtWhite norwester">{props.title}</div>
             </div>
-            <Logosjungletop/>
+            <Logosjungletop id={props.id} />
         </div>
     )
 }

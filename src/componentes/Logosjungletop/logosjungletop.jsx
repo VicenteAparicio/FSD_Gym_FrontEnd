@@ -6,11 +6,11 @@ import AvPuerto from '../../assets/logos/avPuerto.png';
 import '../../assets/fontcolors.css';
 import './logosjungletop.css';
 
-const Logosjungletop = () => {
+const Logosjungletop = (props) => {
 
     return (
 
-        <div id="boxLocalesJungleTop">
+        <div id={props.id} className="boxLocalesJungleTop">
             <div className="localBoxTop">
                 <img id="ruzafaJungleTop" alt="Logo Crosstraining Ruzafa" title="Ruzafa" className="imgLocalTop" src={Ruzafa}/>
             </div>

@@ -1,3 +1,10 @@
+.boxLocalesJungleTop{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 1.5em;
+}
+
 .localBoxTop{
     display: flex;
     justify-content: center;
@@ -16,4 +23,8 @@
     height: 4vmax;
     max-height: 3.5em;
     margin: 1.2em 0 0 3em;
+}
+
+#hide {
+    display: none;
 }
