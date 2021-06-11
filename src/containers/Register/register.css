@@ -32,4 +32,8 @@
     margin: 2em 0;
     padding: .7em 1.5em;
     border-radius: .5em;
+    cursor: pointer;
+}
+.sendButton:hover{
+    background-color: burlywood;
 }
