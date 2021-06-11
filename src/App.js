@@ -10,6 +10,7 @@ import Login from './containers/Login/login';
 import Logcoach from './containers/Logroles/Logcoach/logcoach';
 import Logadmin from './containers/Logroles/Logadmin/logadmin';
 import Loguser from './containers/Logroles/Loguser/loguser';
+import Register from './containers/Register/register';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
           <Route path="/login" exact component={Login}></Route>
           <Route path="/logcoach" exact component={Logcoach}></Route>
           <Route path="/logadmin" exact component={Logadmin}></Route>
-          <Route path="/logadmin" exact component={Loguser}></Route>
+          <Route path="/loguser" exact component={Loguser}></Route>
+          <Route path="/register" exact component={Register}></Route>
         </Switch>
       </BrowserRouter>
       <Footer/>

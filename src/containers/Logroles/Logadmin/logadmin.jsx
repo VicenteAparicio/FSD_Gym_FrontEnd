@@ -15,7 +15,7 @@ const Logadmin = () => {
 
     useEffect(()=>{
         console.log(adminData.token)
-        console.log(adminData.user.nick)
+        console.log(adminData.user.name)
 
     },[]);
     
@@ -28,7 +28,7 @@ const Logadmin = () => {
     if (adminData.token){
         return (
             <div>
-                {adminData.coach.nick}
+                {adminData.user.name}
 
                 <div className="logOut" onClick={()=>Logout()}>LogOut!!</div>
             </div>
