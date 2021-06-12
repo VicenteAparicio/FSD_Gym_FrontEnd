@@ -24,10 +24,7 @@ const Register = () => {
     const checkError = (arg) => {
         switch (arg){
             case 'name':
-                console.log(credentials)
-                console.log(credentials.name);
                 if(credentials.name.length < 4){
-                    console.log("aaaaaaaaaaaaa 22222");
                     setErrors({...errors, eName: 'El nombre debe de tener 4 caracteres'});
                 }else{
                     setErrors({...errors, eName: ''});
@@ -56,28 +53,13 @@ const Register = () => {
             isAdmin: credentials.isAdmin,
             isActive: credentials.isActive
         }
-        console.log('Este es el body que mandamos: ', body);
         
-
-
         axios
             .post('http://localhost:3005/user/newuser', body)
             .then((res)=>{})
             .catch((error)=>{
                 console.log(error);
-            });
-        
-        
-        // if (newOne){          
-        //     localStorage.setItem("token", newOne.data.token);
-        //     localStorage.setItem("user", JSON.stringify(newOne.data.user)    
-        //     setTimeout (()=>{
-        //         history.push("/loguser")
-        //     }, 500)
-        // }
-
-
-   
+            });   
     }
     
 

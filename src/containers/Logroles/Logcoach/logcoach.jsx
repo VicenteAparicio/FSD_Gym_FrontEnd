@@ -8,14 +8,14 @@ const Logcoach = () => {
 
     // HOOKS
     const [coachData, setCoachData] = useState({
-        token: localStorage.getItem('token'),
-        user: JSON.parse(localStorage.getItem('user'))
+        token: localStorage.getItem('tokencoach'),
+        coach: JSON.parse(localStorage.getItem('coach'))
     });
    
 
     useEffect(()=>{
         console.log(coachData.token)
-        console.log(coachData.user.nick)
+        console.log(coachData.coach.name)
 
     },[]);
     
@@ -28,7 +28,7 @@ const Logcoach = () => {
     if (coachData.token){
         return (
             <div>
-                {coachData.coach.nick}
+                {coachData.coach.name}
 
                 <div className="logOut" onClick={()=>Logout()}>LogOut!!</div>
             </div>

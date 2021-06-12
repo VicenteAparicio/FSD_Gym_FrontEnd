@@ -29,22 +29,27 @@ const Loginer = () => {
         let body = {
             email: credentials.email,
             password: credentials.password,
-            options: credentials.options
         }
+        
         console.log('Este es el email, ', body.email);
         console.log('Este es el password, ', body.password);
+        console.log(credentials.options)
         console.log('Hemos cruzado la frontera', body);
         
         // SWITCH ROLES
-        switch (body.options){
-
+        switch (credentials.options){
+            
             case 'user':
                 let loguser = await axios.post('http://localhost:3005/user/login', body);
-                console.log(loguser.data);
+                console.log("Estamos en user login", loguser.data);
+                
                 
                 if (loguser){          
                     localStorage.setItem("token", loguser.data.token);
                     localStorage.setItem("user", JSON.stringify(loguser.data.user));
+
+                    console.log(loguser.data.token);
+                    console.log(JSON.stringify(loguser.data.user));
 
                     setTimeout (()=>{
                         history.push("/loguser")
@@ -57,8 +62,8 @@ const Loginer = () => {
                 console.log(logcoach.data);
 
                 if (logcoach){
-                    localStorage.setItem("token", logcoach.data.token);
-                    localStorage.setItem("user", JSON.stringify(logcoach.data.coach));
+                    localStorage.setItem("tokencoach", logcoach.data.token);
+                    localStorage.setItem("coach", JSON.stringify(logcoach.data.coach));
 
                     setTimeout (()=>{
                         history.push("/logcoach")
