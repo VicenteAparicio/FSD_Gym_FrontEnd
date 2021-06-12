@@ -11,11 +11,12 @@ const Logadmin = () => {
         token: localStorage.getItem('token'),
         user: JSON.parse(localStorage.getItem('user'))
     });
-   
+    
 
     useEffect(()=>{
         console.log(adminData.token)
         console.log(adminData.user.name)
+        console.log(adminData.user.isAdmin)
 
     },[]);
     
@@ -24,8 +25,7 @@ const Logadmin = () => {
 
         setAdminData("");
     }
-
-    if (adminData.token){
+    if (adminData.user.isAdmin == true){
         return (
             <div>
                 {adminData.user.name}

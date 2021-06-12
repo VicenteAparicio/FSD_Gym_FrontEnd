@@ -19,6 +19,7 @@ const Loginer = () => {
         setCredentials({...credentials, [e.target.name]: e.target.value});
     }
 
+    // FUNCION LOGUEAR
     const logueame = async () => {
         //Primero  testeamos los datos
         if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/){
@@ -59,7 +60,6 @@ const Loginer = () => {
 
             case 'coach':
                 let logcoach = await axios.post('http://localhost:3005/coach/login', body);
-                console.log(logcoach.data);
 
                 if (logcoach){
                     localStorage.setItem("tokencoach", logcoach.data.token);
@@ -72,11 +72,8 @@ const Loginer = () => {
                 break;
 
             case 'admin':
-
                 let logadmin = await axios.post('http://localhost:3005/user/login', body);
 
-                console.log(logadmin.data.user.isAdmin)
-                
                 if (logadmin.data.user.isAdmin === true){
                     localStorage.setItem("token", logadmin.data.token);
                     localStorage.setItem("user", JSON.stringify(logadmin.data.user));
@@ -85,9 +82,6 @@ const Loginer = () => {
                         history.push("/logadmin")
                     }, 500)
                 }
-
-                // PARA VERIFICARLO HABRÍA QUE INSTALAR JSONWEBTOKEN, o eso o hacemos una tabla de administradores separada de los users
-
                 break;
 
         }
