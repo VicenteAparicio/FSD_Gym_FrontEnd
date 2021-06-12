@@ -4,15 +4,14 @@
     align-items: center;
     width: 4em;
     height: 2em;
-    color: black;
-    background-color: white;
-    border-radius: 1em;
+    color: white;
+    background-color: blue;
     cursor: pointer;
     box-shadow: 1em 2em 3em grey;
 }
 
 .button:hover{
-    background-color: black;
+    background-color: lightblue;
     color: white;
-    transition: .3s;
+    transition: 0.3s;
 }

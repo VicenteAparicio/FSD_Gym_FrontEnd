@@ -27,7 +27,13 @@ const Loguser = () => {
     if (userData.token){
         return (
             <div>
+                
                 {userData.user.nick}
+                {userData.user.name}
+                {userData.user.email}
+                {userData.user.birthdate}
+                {userData.user.city}
+                {userData.user.country}
 
                 <div className="logOut" onClick={()=>Logout()}>LogOut!!</div>
             </div>
