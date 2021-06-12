@@ -18,6 +18,8 @@ const Navbar = () => {
                     <li><Link to="/agenda" name="HORARIOS Y CLASES"/></li>
                     <li><Link to="/prices" name="TARIFAS"/></li>
                     <li><Link to="/contact" name="CONTACTO"/></li>
+                    <li><Link to="/login" name="LOGIN"/></li>
+                    <li><Link to="/register" name="REGISTER"/></li>
                 </ul>
             </div>
         </div>
