@@ -67,7 +67,7 @@ const Register = () => {
 
     return (
 
-        <div className="containerLogin">
+        <div className="containerRegister">
             {/* <pre>{JSON.stringify(credentials,null,2)}</pre> */}
             <div className="boxLogin bgGreen">
                 

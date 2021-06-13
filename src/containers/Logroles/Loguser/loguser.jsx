@@ -20,8 +20,8 @@ const Loguser = () => {
     
     const Logout = () => {
         localStorage.clear();
-
         setUserData("");
+        history.push("/login")
     }
 
     if (userData.token){

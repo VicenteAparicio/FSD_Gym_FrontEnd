@@ -1,23 +1,42 @@
 .containerLogin{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
+}
+.labelsLogin{
+    font-size: 1.5em;
 }
 
 .boxLogin{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
+    align-self: center;
+    width: 100%;
     padding: 5em 0;
     color: white;
+    margin: 4em 0;
 }
 
 .inputsLogin {
+    all: unset;
+    background-color: white;
+    color: black;
+    padding: .5em;
     margin: .5em 0 1.5em;
+    width: 20vw;
+    max-width: 30em;
+    min-width: 20em;
+}
+
+.selectinputs{
+    padding: .5em 1em;
+    color: rgb(34, 180, 177);
+}
+
+.selectinputs:hover{
+    background-color: black;
+    color: white;
 }
 
 .sendButton {

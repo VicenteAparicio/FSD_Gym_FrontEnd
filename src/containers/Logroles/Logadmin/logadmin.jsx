@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
+
+import Topjungle from '../../../componentes/Topjungle/topjungle';
+import Titlesection from '../../../componentes/Titlesection/titlesection';
+
 import './logadmin.css';
 
 const Logadmin = () => {
@@ -19,18 +23,37 @@ const Logadmin = () => {
         console.log(adminData.user.isAdmin)
 
     },[]);
+
+    const Newcoach = () => {
+        setTimeout(()=>{
+            history.push('/newcoach');
+        }, 1000);
+    }
     
     const Logout = () => {
         localStorage.clear();
-
         setAdminData("");
+        history.push("/login")
     }
-    if (adminData.user.isAdmin == true){
+    if (adminData.user.isAdmin){
         return (
-            <div>
-                {adminData.user.name}
+            <div className="containerLog">
 
-                <div className="logOut" onClick={()=>Logout()}>LogOut!!</div>
+                <Topjungle id="hide" title="BIENVENIDO"/>
+                <Titlesection title="ADMIN"/>
+
+                <div className="infoLog bgGreen txtWhite dinC">
+                    <div className="nameInfo norwester">{adminData.user.name}</div>                    
+                    <div className="dataInfo">{adminData.user.email}</div>
+                    <div className="dataInfo">{adminData.user.country}</div>
+                    <div className="dataInfo">{adminData.user.city}</div>
+                    <div className="dataInfo">{adminData.user.birthdate}</div>
+                </div>
+                <div className="infoLog txtWhite dinC">
+                    <div className="optionsButtons bgGreen" onClick={()=>Newcoach()}>NEW COACH</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div>
+                </div>
+                
             </div>
         )
     } else {

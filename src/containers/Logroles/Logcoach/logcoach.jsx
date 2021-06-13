@@ -2,6 +2,10 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
+
+import Topjungle from '../../../componentes/Topjungle/topjungle';
+import Titlesection from '../../../componentes/Titlesection/titlesection';
+
 import Modifycoach from '../../../componentes/options/modify/Modifycoach/modifycoach';
 
 import './logcoach.css';
@@ -36,6 +40,7 @@ const Logcoach = () => {
     const Logout = () => {
         localStorage.clear();
         setCoachData("");
+        history.push("/login")
     }
 
     const Modify = (show) => {
@@ -61,17 +66,20 @@ const Logcoach = () => {
     if (coachData.token){
         return (
             <div className="containerLog">
+
+                <Topjungle id="hide" title="BIENVENIDO"/>
+                <Titlesection title={coachData.coach.name}/>
+                
                 <div className="infoLog bgGreen txtWhite dinC">
-                    <div className="nameInfo norwester">{coachData.coach.name}</div>
-                    <div className="dataInfo">{coachData.coach.instagram}</div>
-                    <div className="dataInfo">{coachData.coach.birthdate}</div>
+                    <div className="nameInfo norwester">{coachData.coach.name}</div>                    
                     <div className="dataInfo">{coachData.coach.level}</div>
                     <div className="dataInfo">{coachData.coach.tasks}</div>
-                    <div className="options" onClick={()=>Modifycoach()}>Modify</div>
-                    <div className="options" onClick={()=>Logout()}>LogOut!!</div>
+                    <div className="dataInfo">{coachData.coach.instagram}</div>
+                    <div className="dataInfo">{coachData.coach.birthdate}</div>
                 </div>
-                <div className="optionBox">
-                    {visual === "modify" && <Modifycoach/>}
+                <div className="infoLog txtWhite dinC">
+                    <div className="optionsButtons bgGreen" onClick={()=>Modifycoach()}>Modify</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LogOut!!</div>
                 </div>
                 
             </div>

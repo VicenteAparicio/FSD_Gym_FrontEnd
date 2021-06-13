@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
+import Topjungle from '../../componentes/Topjungle/topjungle';
+import Titlesection from '../../componentes/Titlesection/titlesection';
+
 import '../../assets/fontcolors.css';
 import './login.css';
 
@@ -28,7 +31,7 @@ const Loginer = () => {
 
         //A continuación genearmos el body de datos
         let body = {
-            email: credentials.email,
+            email: credentials.email.toLocaleLowerCase(),
             password: credentials.password,
         }
         
@@ -93,19 +96,21 @@ const Loginer = () => {
     return (
 
         <div className="containerLogin">
+            <Topjungle id="hide" title="ENTRA EN TU PERFIL"/>
+            <Titlesection title="LOGIN"/>
             {/* <pre>{JSON.stringify(credentials,null,2)}</pre> */}
             <div className="boxLogin bgGreen">
-                <label className="labelsLogin" for="email">EMAIL</label>
-                <input className="inputsLogin" type="email" name="email" onChange={updateCredentials}></input>
-                <label className="labelsLogin" for="password">PASSWORD</label>
-                <input className="inputsLogin" type="password" name="password" onChange={updateCredentials}></input>
-                <select id="options" name="options" defaultValue="user" onChange={updateCredentials}>
-                    <option className="selectinputs" value="user">User</option>
-                    <option className="selectinputs" value="coach">Coach</option>
-                    <option className="selectinputs" value="admin">Admin</option>
+                <label className="labelsLogin dinC" for="email">EMAIL</label>
+                <input className="inputsLogin" type="email" name="email" onChange={updateCredentials} placeholder="Email"></input>
+                <label className="labelsLogin dinC" for="password">PASSWORD</label>
+                <input className="inputsLogin" type="password" name="password" onChange={updateCredentials} placeholder="Password"></input>
+                <select id="options" name="options" className=" selectinputs dinC" defaultValue="user" onChange={updateCredentials}>
+                    <option value="user">USER</option>
+                    <option value="coach">COACH</option>
+                    <option value="admin">ADMIN</option>
                 </select>
 
-                <div className="sendButton txtGreen" onClick={()=>logueame()}>Login</div>
+                <div className="sendButton txtGreen dinC" onClick={()=>logueame()}>Login</div>
                 <div>{msgError}</div>
             </div>
         </div>

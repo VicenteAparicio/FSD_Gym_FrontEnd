@@ -20,6 +20,7 @@ import Loguser from './containers/Logroles/Loguser/loguser';
 
 import Coach from './containers/Coach/coach';
 import Who from './containers/Who/who';
+import Newcoach from './containers/Newcoach/newcoach';
 
 
 
@@ -47,6 +48,8 @@ function App() {
             <Route path="/logcoach" exact component={Logcoach}></Route>
             <Route path="/logadmin" exact component={Logadmin}></Route>
             <Route path="/loguser" exact component={Loguser}></Route>
+
+            <Route path="/newcoach" exact component={Newcoach}></Route>
 
             <Route path="/coach" exact component={Coach}></Route>
             <Route path="/who" exact component={Who}></Route>
