@@ -61,8 +61,8 @@ const Logcoach = () => {
     if (coachData.token){
         return (
             <div className="containerLog">
-                <div className="infoLog">
-                    <div className="nameInfo">{coachData.coach.name}</div>
+                <div className="infoLog bgGreen txtWhite dinC">
+                    <div className="nameInfo norwester">{coachData.coach.name}</div>
                     <div className="dataInfo">{coachData.coach.instagram}</div>
                     <div className="dataInfo">{coachData.coach.birthdate}</div>
                     <div className="dataInfo">{coachData.coach.level}</div>

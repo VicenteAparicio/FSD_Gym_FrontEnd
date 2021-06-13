@@ -6,6 +6,8 @@ import Titlesection from '../../componentes/Titlesection/titlesection';
 import Midbanner from '../../componentes/Midbanner/midbanner';
 import Bookingtitle from '../../componentes/Bookingtitle/bookingtitle';
 import Gallery from '../../componentes/Gallery/gallery';
+import Mapshome from '../../componentes/Mapshome/mapshome';
+import Instagram from '../../componentes/Instagram/instagram';
 
 
 import '../../assets/fontcolors.css';
@@ -17,7 +19,9 @@ const Home = () => {
             <Topjungle title="PONTE EN FORMA CON NOSOTROS"/>
             <Titlesection title="CONSIGUE TU MEJOR VERSIÓN"/>
             <Gallery/>
+            <Mapshome/>
             <Midbanner/>
+            <Instagram/>
             <Bookingtitle/>
         </section>
     )

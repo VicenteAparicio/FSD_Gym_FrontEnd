@@ -25,6 +25,13 @@
     text-decoration: none;
     cursor: pointer;
     color: white;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.navLinkText:hover{
+    color: rgb(34, 180, 177);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
 }
 
 @media (max-width: 1490px) {
