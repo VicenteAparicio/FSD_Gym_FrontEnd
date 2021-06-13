@@ -13,11 +13,11 @@ const Navbar = () => {
                 <img id="menu" src={menu} alt="Menu container" onClick=""/>
                 <ul id="navLinkBox" className="linksContainer norwester txtWhite" >
                     <li><Link to="/" name="INICIO"/></li>
-                    <li><Link to="/who" name="¿QUIÉNES SOMOS?"/></li>
-                    <li><Link to="/forme" name="¿ES CROSSTRAINING PARA MÍ?"/></li> 
-                    <li><Link to="/agenda" name="HORARIOS Y CLASES"/></li>
-                    <li><Link to="/prices" name="TARIFAS"/></li>
-                    <li><Link to="/contact" name="CONTACTO"/></li>
+                    <li><Link to="/quienessomos" name="¿QUIÉNES SOMOS?"/></li>
+                    <li><Link to="/esparami" name="¿ES CROSSTRAINING PARA MÍ?"/></li> 
+                    <li><Link to="/horarios" name="HORARIOS Y CLASES"/></li>
+                    <li><Link to="/tarifas" name="TARIFAS"/></li>
+                    <li><Link to="/contacto" name="CONTACTO"/></li>
                     <li><Link to="/login" name="LOGIN"/></li>
                     <li><Link to="/register" name="REGISTER"/></li>
                 </ul>

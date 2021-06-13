@@ -29,7 +29,9 @@ function App() {
 
     <div>
       <BrowserRouter>
-      <Header/>
+
+        <Header/>
+
         <Switch>
           <div className="switchContainer">
             <Route path="/" exact component={Home}></Route>
@@ -48,12 +50,12 @@ function App() {
 
             <Route path="/coach" exact component={Coach}></Route>
             <Route path="/who" exact component={Who}></Route>
-            
           </div>
         </Switch>
-      </BrowserRouter>
-      <Footer/>
 
+        <Footer/>
+
+      </BrowserRouter>
     </div>
   );
 }

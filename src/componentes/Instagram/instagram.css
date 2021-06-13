@@ -1,0 +1,75 @@
+#bottomHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+#igFollowContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 8vmax 0;
+}
+#containerCircleLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 2em;
+}
+#logoIG{
+    height: 250px;
+    width: auto;
+}
+#topTextIG{
+    font-size: 4vmax;
+}
+#botTextIG{
+    font-size: 3vmax;
+    line-height: .5;
+}
+
+#gallery03{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 0 4vmax 0;
+    width: 70%;
+}
+.igBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 20vmax;
+    max-width: 14em;
+    height: 20vmax;
+    max-height: 14em;
+    margin-bottom: 2.8em;
+    background-color: black;
+}
+.gallery03Pics{
+    width: 100%;    
+}
+
+@media (max-width: 950px) {
+    #igFollowContainer{
+        flex-direction: column;
+    }
+    
+    #containerCircleLogo{
+        margin: 0 0 1em 0;
+    }
+    #gallery03{
+        width: 100%;
+        margin: 0 0 4em;
+    }
+    .igBox{
+        margin-bottom: .5em;
+    }
+}
