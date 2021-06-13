@@ -1,0 +1,24 @@
+#topJungle{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(0, 68, 68);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+}
+
+#leftJungleTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+#logoTop{
+    width: 30vmax;
+    max-width: 25em;
+}

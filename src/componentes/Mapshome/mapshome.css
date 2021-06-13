@@ -1,0 +1,86 @@
+#gMapContainer{
+    align-self: center;
+    width: 70%;
+}
+.title02{
+    font-size: 5em;
+    letter-spacing: .01em;
+    line-height: .8;
+    width: 100%;
+    z-index: 2;
+}
+.mapContainers{
+    width: 48.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.mapContainers:first-child{
+    margin-right: 3%;
+}
+#gallery02{
+    margin: 4em 0 5em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.styleMap{
+    border:0;
+    width: 100%;
+    height: 30em;
+}
+.gMap{
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+
+}
+.gMapDirection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 8em;   
+}
+.gMapText{
+    margin-left: 3em;
+}
+.subInfoGMap{
+    font-size: 1.5vmax;
+}
+
+@media (max-width: 950px) {
+        #gMapContainer{
+            width: 90%;
+        }
+        .mapContainers{
+            width: 100%;
+        }
+        .mapContainers:first-child{
+            margin: 0 0 4em;
+        }
+        .mapContainers:last-child{
+            margin-top: 2em;
+        }
+        .styleMap{
+            height: 20em;
+        }
+        #gallery02{
+            flex-direction: column;
+        }
+        .gMapDirection{
+            flex-wrap: nowrap;
+            display: flex;
+            flex-direction: column;
+        }
+        .gMapText{
+            margin: 0;
+        }
+        .subInfoGMap{
+            font-size: 1.8em;
+        }
+        .imgLocalGMap{
+            margin-bottom: 1em;
+        }
+    }

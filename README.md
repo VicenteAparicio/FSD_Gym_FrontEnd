@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Frontend Project: Gym
+## Made by [Miguel Torres](https://github.com/migueltmsp) and [Vicente Aparicio](https://github.com/VicenteAparicio)<br>
+This project was proposed and deployed on the 7-8th week of [GeeksHubs' Full Stack Developer Bootcamp](https://geekshubsacademy.com/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hecho por [Miguel Torres](https://github.com/migueltmsp), y [Vicente Aparicio](https://github.com/VicenteAparicio)<br>
+Este proyecto se propuso e implementó en la 7-8ª semana del [Bootcamp Full Stack Developer de GeeksHubs](https://geekshubsacademy.com/)
 
-## Available Scripts
+<details><summary>ENGLISH</summary>
 
-In the project directory, you can run:
+## Goal and used technologies
 
-### `npm start`
+This is the second part of a Full Stack project, namely, a website for a gym chain. The requirements for this only-frontend work were the following: <br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Home/Main View
+* Login View
+* Sign Up View
+* Appointments View
+    * Individual (for each user)
+    * List All (Admin)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The technologies we used were: <br> <br>
+<img src="https://camo.githubusercontent.com/3e9f1d82233cb9a42ed30a63d093f2b4502d879301f8cce220de7f0d3b84f5bf/687474703a2f2f33636f6e31342e62697a2f636f64652f5f646174612f6a732f696e74726f2f6a732d6c6f676f2e706e67" width= "20vw" height = "20vh" >
+<img src="https://cdn.iconscout.com/icon/free/png-256/node-js-3-1174937.png" width= "20vw" height = "20vh" >
+<img src="https://ps.w.org/jwt-auth/assets/icon-256x256.png?rev=2298869" width= "20vw" height = "20vh" >
+<img src="https://cdn.substack.com/image/fetch/w_264,c_limit,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8e9aa3e7-93f3-45aa-8aac-d8acf45f33b7_256x256.png" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
 
-### `npm test`
+## Project deployment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the project from [here]().
 
-### `npm run build`
+Install the needed dependencies (on Bash): 
+```
+npm i
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will link you directly to our backend hosted at Heroku.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Although we used 3000 as the default port, you can use another one of your choice, but **remember to change it on index.js / const port**.
+<br> <br>
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+<summary>ESPAÑOL</summary>
 
-### `npm run eject`
+## Objetivo y tecnologías empleadas
+Esta es la segunda parte de un proyecto Full Stack, concretamente de una web para una cadena de gimnasios. Los requisitos para este trabajo de solo frontend fueron: <br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Vista Home/Principal
+* Vista Login
+* Vista Registro
+* Vista citas
+    * Vista individual (para cada usuario)
+    * Vista completa (para el admin)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Las tecnologías empleadas fueron: <br> <br>
+<img src="https://camo.githubusercontent.com/3e9f1d82233cb9a42ed30a63d093f2b4502d879301f8cce220de7f0d3b84f5bf/687474703a2f2f33636f6e31342e62697a2f636f64652f5f646174612f6a732f696e74726f2f6a732d6c6f676f2e706e67" width= "20vw" height = "20vh" >
+<img src="https://cdn.iconscout.com/icon/free/png-256/node-js-3-1174937.png" width= "20vw" height = "20vh" >
+<img src="https://ps.w.org/jwt-auth/assets/icon-256x256.png?rev=2298869" width= "20vw" height = "20vh" >
+<img src="https://cdn.substack.com/image/fetch/w_264,c_limit,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8e9aa3e7-93f3-45aa-8aac-d8acf45f33b7_256x256.png" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
+<img src="" width= "20vw" height = "20vh" >
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clona el proyecto desde [aquí]().
 
-### Code Splitting
+Instala las dependencias necesarias (desde Bash): 
+```
+npm i
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Aunque hemos usado 3000 como el puerto para el backend, puedes emplear otro, pero **recuerda cambiarlo desde index.js / const port**.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Conclusiones
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,56 @@
+.middle{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    /* background-image: url('/img/banners/crosstraining20-reverse.jpg'); */
+    background-color: rgb(0, 68, 68);
+    background-position-y: -5em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3em;
+}
+#leftMiddle{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 40vmax;
+    height: 100%;
+    background-color: rgba(34, 180, 177, .8) ;
+    padding: 5em;
+}
+.textoMiddle{
+    font-weight: bold;
+    font-size: 2.2em;
+    letter-spacing: .15em;
+    word-spacing: .1em;
+    line-height: 1.4em;
+    width: 20em;
+    margin-top: 2em;
+    z-index: 2;
+}
+#triangle{
+    border-style: solid;
+    border-width: 40.5em 4em 0 0;
+    border-color: rgba(34, 180, 177, .8) transparent transparent transparent;
+    z-index: 1;
+}
+
+
+
+@media (max-width: 950px) {
+    /* MIDDLE */
+    #leftMiddle{
+        box-sizing: border-box;
+        align-items: center;
+        width: 100%;
+        padding: 3em 2em;
+    }
+    .textoMiddle{
+        font-size: 1em;
+        width: 100%;
+    }
+    #triangle{
+        display: none;
+    }
+
+}

@@ -1,0 +1,15 @@
+#rightJungleTop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.textoJungleTop{
+    font-size: 5vmax;
+    letter-spacing: .01em;
+    word-spacing: .1em;
+    line-height: .8;
+    text-align: center;
+}
+
+

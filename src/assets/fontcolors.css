@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Norwester';
+    src: url('./fonts/Norwester-Accents.woff');
+}
+@font-face {
+    font-family: 'Din Condensed';
+    src: url('./fonts/D-DINCondensed-Bold.ttf');
+}
+@font-face { 
+    font-family: 'ironman';
+    src: url('./fonts/ironman.ttf');
+}
+/* COLOR SETS */
+.bgGreen{
+    background-color: rgb(34, 180, 177);
+}
+.bgBlack{
+    background-color: black;
+}
+.txtBlack{
+    color: black;
+}
+.txtWhite{
+    color: white;
+}
+.txtGreen{
+    color: rgb(34, 180, 177);
+}
+/* TIPOGRAFIAS */
+.norwester{
+    font-family: 'Norwester';
+}
+.dinC{
+    font-family: 'DIN Condensed';
+}
+.ironman{
+    font-family: 'ironman';
+}
+
+/* TITLE 01 */
+.titleBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 80%;
+    margin: 1.5em 0 2em 0;
+}
+.title01{
+    font-size: 4.5vmax;
+    letter-spacing: .10em;
+    text-align: center;
+    z-index: 2;
+}
+.greenBar{
+    margin-top: -2.8vmax;
+    height: 1.5em;
+    width: 90%;
+    z-index: 1;
+}
+
+.title02{
+    font-size: 5em;
+    letter-spacing: .01em;
+    line-height: .8;
+    width: 100%;
+    z-index: 2;
+}
+
+/* SECTIONS */
+.sections{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+@media (max-width: 950px) {
+    .greenBar{
+        display: none;
+    }
+    .title01{
+        line-height: .8em;
+    }
+    .title02{
+        font-size: 6vmax;
+    }
+}

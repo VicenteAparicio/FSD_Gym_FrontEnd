@@ -1,0 +1,72 @@
+
+#contactoContainer{
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    margin: 10em 0;
+}
+#mapBoxContact{
+    display: flex;
+    flex-direction: column;
+}
+.contactMapContainer{
+    width: 100%;
+}
+#topMapContainer{
+    margin-bottom: 6em;
+
+}
+#greenVerticalBar{
+    width: .5em;
+    height: 65vmax;
+    margin: 0 8em;
+}
+/* FORM */
+
+#introForm{
+    font-size: 2em;
+    width: 14.5em;
+}
+#i-recaptcha{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    margin-top: 2em;
+}
+label{
+    font-size: 2em;
+}
+input{
+    border: none;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+textarea{
+    height: 10em;
+}
+
+@media (max-width: 1250px) {
+    #contactoContainer{
+
+        flex-direction: column;
+        align-items: center;
+    }
+    #greenVerticalBar{
+        display: none;
+    }
+    #mapBoxContact{
+        margin-bottom: 4em;
+    }
+    #introForm{
+        font-size: 1.5em;
+    }
+    #formContainer{
+
+
+        margin-bottom: 4em;
+    }
+
+
+}

@@ -1,0 +1,30 @@
+
+#smallPics{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: .5em;
+    width: 100%;
+}
+.sPGallery01:hover{
+    filter: brightness(1.2);
+}
+
+.sPGallery01{
+    height: 6vmax;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin: 0 .5em .5em 0;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    filter: brightness(.8);
+}
+
+
+@media (max-width: 950px) {
+    .sPGallery01{
+        height: 3.8vmax;
+    }
+}
+

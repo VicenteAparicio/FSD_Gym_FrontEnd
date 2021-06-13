@@ -1,0 +1,17 @@
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4em;
+    height: 2em;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+    box-shadow: 1em 2em 3em grey;
+}
+
+.button:hover{
+    background-color: lightblue;
+    color: white;
+    transition: 0.3s;
+}
