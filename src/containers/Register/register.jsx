@@ -10,7 +10,7 @@ const Register = () => {
     let history = useHistory();
 
     // Hooks
-    const [credentials, setCredentials] = useState({name:'',nick:'',email:'',password:'',birthdate:'',country:'',city:'',isAdmin:'false',isActive:'false'});
+    const [credentials, setCredentials] = useState({name:'',nick:'',email:'',password:'',birthdate:'',country:'',city:'',isAdmin:'false',isActive:'true'});
     const [errors, setErrors] = useState({eName: '',eNick: '',eEmail: '',ePassword:'',eBirthdate:'',eCountry:'',eCity:''});
 
     const [msgError, setMensajeError] = useState('');
@@ -22,17 +22,17 @@ const Register = () => {
 
     // FUNCTION ERROR CHECK
     const checkError = (arg) => {
-        switch (arg){
-            case 'name':
-                if(credentials.name.length < 4){
-                    setErrors({...errors, eName: 'El nombre debe de tener 4 caracteres'});
-                }else{
-                    setErrors({...errors, eName: ''});
-                }
-            break;
-            case 'email':
-            break;
-        }
+        // switch (arg){
+        //     case 'name':
+        //         if(credentials.name.length < 4){
+        //             setErrors({...errors, eName: 'El nombre debe de tener 4 caracteres'});
+        //         }else{
+        //             setErrors({...errors, eName: ''});
+        //         }
+        //     break;
+        //     case 'email':
+        //     break;
+        // }
     }
 
     const logueame = async () => {
@@ -95,7 +95,7 @@ const Register = () => {
     
                 
 
-                <div className="sendButton txtGreen" onClick={()=>logueame()}>Login</div>
+                <div className="sendButton txtGreen" onClick={()=>logueame()}>Register</div>
                 <div>{msgError}</div>
             </div>
         </div>

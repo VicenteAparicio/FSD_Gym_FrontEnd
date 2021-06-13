@@ -36,12 +36,12 @@ const Gallery = () => {
 
             <div id="smallPics">
                 <div className="picContainer">
-                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic01} onclick={showBig(this)}/>
-                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic02} onclick={showBig(this)}/>
-                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic03} onclick={showBig(this)}/>
-                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic04} onclick={showBig(this)}/>
-                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic05} onclick={showBig(this)}/>
-                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic06} onclick={showBig(this)}/>
+                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic01} onClick={showBig(this)}/>
+                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic02} onClick={showBig(this)}/>
+                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic03} onClick={showBig(this)}/>
+                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic04} onClick={showBig(this)}/>
+                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic05} onClick={showBig(this)}/>
+                    <img alt="Foto entrenamientos en Crosstraining" title="Crosstraining" className="sPGallery01" src={Smallpic06} onClick={showBig(this)}/>
                 </div>
             </div>
 

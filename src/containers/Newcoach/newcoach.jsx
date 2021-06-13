@@ -10,8 +10,8 @@ const Newcoach = () => {
     let history = useHistory();
 
     // Hooks
-    const [credentials, setCredentials] = useState({name:'',email:'',password:'',birthdate:'',country:'',city:'',isAdmin:'false',isActive:'false'});
-    const [errors, setErrors] = useState({eName: '',eEmail: '',ePassword:'',eBirthdate:'',eCountry:'',eCity:''});
+    const [credentials, setCredentials] = useState({name:'', nick:'', instagram:'',email:'',password:'',birthdate:'', level:'', position:'', tasks:'', special:'',country:'',city:'', isCoach:'true', isAdmin:'false',isActive:'true',lessons:''});
+    const [errors, setErrors] = useState({eName:'', eNick:'', eInstagram:'',eEmail:'',ePassword:'',eBirthdate:'', eLevel:'', ePosition:'', eTasks:'', eSpecial:'',eCountry:'',eCity:''});
 
     const [msgError, setMensajeError] = useState('');
 
@@ -36,20 +36,20 @@ const Newcoach = () => {
 
     // FUNCTION ERROR CHECK
     const checkError = (arg) => {
-        switch (arg){
-            case 'name':
-                if(credentials.name.length < 4){
-                    setErrors({...errors, eName: 'El nombre debe de tener 4 caracteres'});
-                }else{
-                    setErrors({...errors, eName: ''});
-                }
-            break;
-            case 'email':
-            break;
-        }
+        // switch (arg){
+        //     case 'name':
+        //         if(credentials.name.length < 4){
+        //             setErrors({...errors, eName: 'El nombre debe de tener 4 caracteres'});
+        //         }else{
+        //             setErrors({...errors, eName: ''});
+        //         }
+        //     break;
+        //     case 'email':
+        //     break;
+        // }
     }
 
-    const logueame = async () => {
+    const Registercoach = async () => {
         //Primero  testeamos los datos
         if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/){
             setMensajeError("Introduce un email válido");
@@ -58,21 +58,40 @@ const Newcoach = () => {
         //A continuación genearmos el body de datos
         let body = {
             name: credentials.name,
+            nick: credentials.nick,
             email: credentials.email,
+            instagram: credentials.instagram,
             password: credentials.password,
             birthdate: credentials.birthdate,
+            level: credentials.level,
+            position: credentials.position,
+            tasks: credentials.tasks,
+            special: credentials.special,
             country: credentials.country,
             city: credentials.city,
+            isCoach: credentials.isCoach,
             isAdmin: credentials.isAdmin,
-            isActive: credentials.isActive
+            isActive: credentials.isActive,
+            lessons: credentials.lessons
         }
+
+        let tokenization = adminData.token;
         
         axios
-            .post('http://localhost:3005/coach/newcoach', body)
-            .then((res)=>{})
+            .post('http://localhost:3005/coach/newcoach', body, {headers: {'Authorization': `Basic ${tokenization}`}})
+            .then((res)=>{
+                if (res){
+                    console.log("este es el res", res)
+                    setTimeout(()=>{
+                        history.push("/");
+                    }, 1000)
+                }
+            })
             .catch((error)=>{
                 console.log(error);
-            });   
+            });
+            
+            
     }
     
 
@@ -93,9 +112,24 @@ const Newcoach = () => {
                     <label className="labelsLogin" for="email">EMAIL</label>
                     <input require="true" className="inputsLogin" type="email" name="email" onChange={updateCredentials} onBlur={()=>checkError("email")} placeholder="Email"/>
                     <div>{errors.eEmail}</div>
+                    <label className="labelsLogin" for="instagram">INSTAGRAM</label>
+                    <input require="true" className="inputsLogin" type="text" name="instagram" onChange={updateCredentials} onBlur={()=>checkError("instagram")} placeholder="Instagram"/>
+                    <div>{errors.eEmail}</div>
                     <label className="labelsLogin" for="password">PASSWORD</label>
                     <input require="true" className="inputsLogin" type="password" name="password" onChange={updateCredentials} onBlur={()=>checkError("password")} placeholder="Password"/>
                     <div>{errors.ePassword}</div>
+                    <label className="labelsLogin" for="level">LEVEL</label>
+                    <input require="true" className="inputsLogin" type="text" name="level" onChange={updateCredentials} onBlur={()=>checkError("level")} placeholder="Level"/>
+                    <div>{errors.eLevel}</div>
+                    <label className="labelsLogin" for="position">POSITION</label>
+                    <input require="true" className="inputsLogin" type="text" name="position" onChange={updateCredentials} onBlur={()=>checkError("position")} placeholder="Position"/>
+                    <div>{errors.ePosition}</div>
+                    <label className="labelsLogin" for="tasks">TASKS</label>
+                    <input require="true" className="inputsLogin" type="text" name="tasks" onChange={updateCredentials} onBlur={()=>checkError("tasks")} placeholder="Tasks"/>
+                    <div>{errors.ePosition}</div>
+                    <label className="labelsLogin" for="special">SPECIAL</label>
+                    <input require="true" className="inputsLogin" type="text" name="special" onChange={updateCredentials} onBlur={()=>checkError("special")} placeholder="Special"/>
+                    <div>{errors.ePosition}</div>
                     <label className="labelsLogin" for="birthdate">BIRTHDATE</label>
                     <input className="inputsLogin" type="date" name="birthdate" onChange={updateCredentials} onBlur={()=>checkError("birthdate")} placeholder="Birth date"/>
                     <div>{errors.eBirthdate}</div>
@@ -108,7 +142,7 @@ const Newcoach = () => {
         
                     
 
-                    <div className="sendButton txtGreen" onClick={()=>logueame()}>Login</div>
+                    <div className="sendButton txtGreen" onClick={()=>Registercoach()}>Register</div>
                     <div>{msgError}</div>
                 </div>
             </div>

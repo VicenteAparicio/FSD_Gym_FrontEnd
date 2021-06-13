@@ -68,7 +68,7 @@ const Logcoach = () => {
             <div className="containerLog">
 
                 <Topjungle id="hide" title="BIENVENIDO"/>
-                <Titlesection title={coachData.coach.name}/>
+                <Titlesection title='COACH'/>
                 
                 <div className="infoLog bgGreen txtWhite dinC">
                     <div className="nameInfo norwester">{coachData.coach.name}</div>                    
