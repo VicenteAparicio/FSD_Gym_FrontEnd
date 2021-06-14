@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import './loguser.css';
+import '../userlessons/userlessons'
 
 const Loguser = () => {
 
@@ -26,24 +27,10 @@ const Loguser = () => {
     }
 
     const MyLessons = () => {
-        
+
+        console.log("Te empuja a userlessons")
         history.push("/userlessons")
 
-        console.log("Id barrabaja",userData.user._id)
-        let body = {
-            userId : userData.user._id,
-        }
-
-        axios
-        .post('http://localhost:3005/user/all_my_lessons', body, {headers: {'Authorization': `Basic ${userData.token}`}})
-        .then((res)=>{
-            console.log(res.data[0].title)
-            console.log(res.data[1].title)
-            localStorage.setItem(res)
-        })
-        .catch((error)=>{
-            console.log("No entra a res");
-        });  
     }
 
     if (userData.token){

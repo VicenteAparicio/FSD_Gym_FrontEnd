@@ -1,0 +1,40 @@
+.containerLog {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.infoLog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 40%;
+    margin: 2em 0;
+    padding: 2em 1em;
+}
+
+.nameInfo {
+    font-size: 4em;
+    line-height: .8em;
+    margin-bottom: .5em;
+}
+
+.dataInfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
+.optionsButtons {
+    padding: .5em 1.2em;
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    width: 20vmax;
+    cursor: pointer;
+}
+
+.optionsButtons:hover {
+    background-color: black;
+}
