@@ -13,7 +13,8 @@ const Alllessons = () => {
         token: localStorage.getItem('token'),
         user: JSON.parse(localStorage.getItem('user'))
     });
-    const [lessonInfo, setLessonInfo] = useState({info:''})
+    const [lessonInfo, setLessonInfo] = useState([]);
+
     useEffect(()=>{
         console.log(userData.token)
         console.log(userData.user.nick)
@@ -25,8 +26,6 @@ const Alllessons = () => {
         history.push("/login")
     }
     const Back = () => {
-        localStorage.clear();
-        setUserData("");
         history.push("/logadmin")
     }
     const MyLessons = async () => {

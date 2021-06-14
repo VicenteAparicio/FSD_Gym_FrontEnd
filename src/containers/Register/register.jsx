@@ -35,7 +35,7 @@ const Register = () => {
         // }
     }
 
-    const logueame = async () => {
+    const Registration = async () => {
         //Primero  testeamos los datos
         if (! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/){
             setMensajeError("Introduce un email válido");
@@ -95,7 +95,7 @@ const Register = () => {
     
                 
 
-                <div className="sendButton txtGreen" onClick={()=>logueame()}>Register</div>
+                <div className="sendButton txtGreen" onClick={()=>Registration()}>Register</div>
                 <div>{msgError}</div>
             </div>
         </div>

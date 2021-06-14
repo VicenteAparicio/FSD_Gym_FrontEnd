@@ -19,9 +19,9 @@ const Logadmin = () => {
     
 
     useEffect(()=>{
-        console.log(adminData.token)
-        console.log(adminData.user.name)
-        console.log(adminData.user.isAdmin)
+        console.log(adminData?.token)
+        console.log(adminData.user?.name)
+        console.log(adminData.user?.isAdmin)
 
     },[]);
 
@@ -42,7 +42,7 @@ const Logadmin = () => {
         setAdminData("");
         history.push("/login")
     }
-    if (adminData.user.isAdmin){
+    if (adminData.user?.isAdmin){
         return (
             <div className="containerLog">
 

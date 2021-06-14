@@ -2,24 +2,31 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import './userlessons.css';
-import '../Loguser/loguser'
+import '../Loguser/loguser';
+
 const Userlessons = () => {
+
     let history = useHistory();
+
     const [userData, setUserData] = useState({
         token: localStorage.getItem('token'),
         user: JSON.parse(localStorage.getItem('user'))
     });
-    const [lessonInfo, setLessonInfo] = useState({info:''})
+
+    const [lessonInfo, setLessonInfo] = useState([]);
+
     useEffect(()=>{
         console.log(userData.token)
         console.log(userData.user.nick)
         MyLessons();
     },[]);
+
     const Logout = () => {
         localStorage.clear();
         setUserData("");
         history.push("/login")
     }
+
     const MyLessons = async () => {
 
         let body = {
@@ -38,7 +45,6 @@ const Userlessons = () => {
 
     if (userData.user){
 
-        let lesson = lessonInfo;
             return (
                 <div>
                  {lessonInfo.map((lesson, index)=>(     
