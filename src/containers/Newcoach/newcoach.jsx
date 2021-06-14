@@ -2,6 +2,9 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
+import Topjungle from '../../componentes/Topjungle/topjungle';
+import Titlesection from '../../componentes/Titlesection/titlesection';
+
 import '../../assets/fontcolors.css';
 import './newcoach.css';
 
@@ -100,6 +103,9 @@ const Newcoach = () => {
         return (
 
             <div className="containerRegister">
+                <Topjungle id="hide" title="MANAGE NEW COACH"/>
+                <Titlesection title='NEW COACH'/>
+
                 {/* <pre>{JSON.stringify(credentials,null,2)}</pre> */}
                 <div className="boxLogin bgGreen">
                     

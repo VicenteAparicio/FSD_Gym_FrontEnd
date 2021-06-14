@@ -6,6 +6,7 @@ import Titlesection from '../../../componentes/Titlesection/titlesection';
 
 import './logadmin.css';
 
+
 const Logadmin = () => {
 
     let history = useHistory();
@@ -23,6 +24,12 @@ const Logadmin = () => {
         console.log(adminData.user.isAdmin)
 
     },[]);
+
+    const Alllessons = () => {
+        setTimeout(()=>{
+            history.push('/alllessons');
+        }, 1000);
+    }
 
     const Newcoach = () => {
         setTimeout(()=>{
@@ -51,6 +58,7 @@ const Logadmin = () => {
                 </div>
                 <div className="infoLog txtWhite dinC">
                     <div className="optionsButtons bgGreen" onClick={()=>Newcoach()}>NEW COACH</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>Alllessons()}>ALL LESSONS</div>
                     <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div>
                 </div>
                 

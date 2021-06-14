@@ -1,0 +1,19 @@
+.lessonsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.lessonsBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.lessonCard {
+    padding: 2em 1em;
+    margin: 2em 2em;
+    width: 25vmax;
+    max-width: 60em;
+}

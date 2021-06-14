@@ -21,6 +21,7 @@ import Loguser from './containers/Logroles/Loguser/loguser';
 import Coach from './containers/Coach/coach';
 import Who from './containers/Who/who';
 import Newcoach from './containers/Newcoach/newcoach';
+import Alllessons from './containers/Alllessons/alllessons';
 
 
 
@@ -50,6 +51,7 @@ function App() {
             <Route path="/loguser" exact component={Loguser}></Route>
 
             <Route path="/newcoach" exact component={Newcoach}></Route>
+            <Route path="/alllessons" exact component={Alllessons}></Route>
 
             <Route path="/coach" exact component={Coach}></Route>
             <Route path="/who" exact component={Who}></Route>

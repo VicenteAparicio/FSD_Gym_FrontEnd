@@ -15,3 +15,7 @@
     color: white;
     transition: 0.3s;
 }
+
+.lessonName{
+    font-size: 4em ;
+}
