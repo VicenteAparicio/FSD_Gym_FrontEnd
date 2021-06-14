@@ -12,24 +12,26 @@ const Alllessons = () => {
     const [userData, setUserData] = useState({
         token: localStorage.getItem('token'),
         user: JSON.parse(localStorage.getItem('user'))
+        
     });
     const [lessonInfo, setLessonInfo] = useState({info:''})
     useEffect(()=>{
         console.log(userData.token)
         console.log(userData.user.nick)
-        MyLessons();
+        Alllessons();
+        
     },[]);
     const Logout = () => {
         localStorage.clear();
         setUserData("");
-        history.push("/login")
+        history.push("/login");
     }
     const Back = () => {
         localStorage.clear();
         setUserData("");
-        history.push("/logadmin")
+        history.push("/logadmin");
     }
-    const MyLessons = async () => {
+    const Alllessons = async () => {
         try{
             let res = await axios.get('http://localhost:3005/lesson/alllessons', {headers: {'Authorization': `Basic ${userData.token}`}});
             setLessonInfo(res.data)
