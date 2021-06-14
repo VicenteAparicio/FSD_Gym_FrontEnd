@@ -56,7 +56,7 @@ const Alllessons = () => {
                         ))}
                     </div>
                     <div className="bLessonsBox">
-                        <div className="bLessons bgGreen dinC" onClick={()=>Logout()}>LogOut!!</div>
+                        <div className="bLessons bgGreen dinC" onClick={()=>Logout()}>Logout</div>
                         <div className="bLessons bgGreen dinC" onClick={()=>Back()}>Back</div>
                     </div>
                 </div>

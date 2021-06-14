@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
+
+import Topjungle from '../../../componentes/Topjungle/topjungle';
+import Titlesection from '../../../componentes/Titlesection/titlesection';
+
 import './loguser.css';
 import '../userlessons/userlessons'
 
@@ -35,19 +39,21 @@ const Loguser = () => {
 
     if (userData.token){
         return (
-            <div>
-                <div className= "userInformation">
-                    {userData.user.nick}
-                    {userData.user.name}
-                    {userData.user.email}
-                    {userData.user.birthdate}
-                    {userData.user.city}
-                    {userData.user.country}
-                 </div>
-
-                <div className="myLessons" onClick={()=>MyLessons()}>My Lessons</div>
-
-                <div className="logOut" onClick={()=>Logout()}>LogOut!!</div>
+            <div className="containerLog">
+                <Topjungle id="hide" title="BIENVENIDO"/>
+                <Titlesection title="USER"/>
+                <div className="infoLog bgGreen txtWhite dinC">
+                    <div className="nameInfo norwester">{userData.user.name}</div>
+                    <div className="dataInfo">{userData.user.nick}</div>
+                    <div className="dataInfo">{userData.user.email}</div>
+                    <div className="dataInfo">{userData.user.birthdate}</div>
+                    <div className="dataInfo">{userData.user.city}</div>
+                    <div className="dataInfo">{userData.user.country}</div>
+                </div>
+                <div className="infoLog txtWhite dinC">
+                    <div className="optionsButtons bgGreen" onClick={()=>MyLessons()}>MY LESSONS</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div>
+                    </div>
 
             </div>
         )
