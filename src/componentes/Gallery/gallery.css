@@ -4,17 +4,20 @@
     flex-direction: column;
     justify-content: flex-start;
     align-self: center;
+    align-items: center;
     width: 70vmax;
+
 }
 
-#bigPic{
-    align-items: flex-end;
-    overflow: hidden;
+.bigPic{
+    height: 60vmin;
 }
 
 .bigPicture{
-    width: 100%;
+    align-self: center;
+    height: 100%;
 }
+
 #smallPics{
     display: flex;
     flex-direction: row;
@@ -23,12 +26,17 @@
     margin-top: .5em;
     width: 100%;
 }
+
+.picContainer{
+    display: flex;
+    justify-content: center;
+}
 .sPGallery01:hover{
     filter: brightness(1.2);
 }
 
 .sPGallery01{
-    height: 6vmax;
+    height: 10vmin;
     justify-self: flex-start;
     align-self: flex-start;
     margin: 0 .5em .5em 0;
