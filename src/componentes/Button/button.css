@@ -4,18 +4,15 @@
     align-items: center;
     width: 4em;
     height: 2em;
-    color: white;
-    background-color: blue;
+    color: black;
+    background-color: white;
+    border-radius: 1em;
     cursor: pointer;
     box-shadow: 1em 2em 3em grey;
 }
 
 .button:hover{
-    background-color: lightblue;
+    background-color: black;
     color: white;
-    transition: 0.3s;
-}
-
-.lessonName{
-    font-size: 4em ;
+    transition: .3s;
 }

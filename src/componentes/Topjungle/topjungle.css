@@ -22,3 +22,12 @@
     width: 30vmax;
     max-width: 25em;
 }
+
+@media (max-width: 950px) {
+    #topJungle{
+        flex-direction: column;
+    }
+    #leftJungleTop{
+        width: 100%;
+    }
+}

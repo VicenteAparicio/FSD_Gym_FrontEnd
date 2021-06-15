@@ -9,7 +9,7 @@ import Quienessomos from './containers/Quienessomos/quienessomos';
 import Esparami from './containers/Esparami/esparami';
 import Horarios from './containers/Horarios/horarios';
 import Tarifas from './containers/Tarifas/tarifas';
-import Contacto from './containers/Contacto/contacto';
+import Contacto from './containers/Contact/contacto';
 
 import Login from './containers/Login/login';
 import Register from './containers/Register/register';
@@ -30,7 +30,7 @@ import Alllessons from './containers/Alllessons/alllessons';
 function App() {
   return (
 
-    <div>
+    <div className="master">
       <BrowserRouter>
 
         <Header/>
