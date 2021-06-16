@@ -6,6 +6,7 @@ import Titlesection from '../../../componentes/Titlesection/titlesection';
 
 import './logadmin.css';
 
+
 const Logadmin = () => {
 
     let history = useHistory();
@@ -18,11 +19,17 @@ const Logadmin = () => {
     
 
     useEffect(()=>{
-        console.log(adminData.token)
-        console.log(adminData.user.name)
-        console.log(adminData.user.isAdmin)
+        console.log(adminData?.token)
+        console.log(adminData.user?.name)
+        console.log(adminData.user?.isAdmin)
 
     },[]);
+
+    const Alllessons = () => {
+        setTimeout(()=>{
+            history.push('/alllessons');
+        }, 1000);
+    }
 
     const Newcoach = () => {
         setTimeout(()=>{
@@ -35,7 +42,7 @@ const Logadmin = () => {
         setAdminData("");
         history.push("/login")
     }
-    if (adminData.user.isAdmin){
+    if (adminData.user?.isAdmin){
         return (
             <div className="containerLog">
 
@@ -51,6 +58,7 @@ const Logadmin = () => {
                 </div>
                 <div className="infoLog txtWhite dinC">
                     <div className="optionsButtons bgGreen" onClick={()=>Newcoach()}>NEW COACH</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>Alllessons()}>ALL LESSONS</div>
                     <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div>
                 </div>
                 

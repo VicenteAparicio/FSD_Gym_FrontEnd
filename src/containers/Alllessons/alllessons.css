@@ -1,0 +1,50 @@
+.lessonsContainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.lessonsBox{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.lessonCard {
+    padding: 1em;
+    margin: 2em 2em;
+    width: 25vmax;
+    max-width: 60em;
+}
+
+.lessonName{
+    font-size: 3em;
+}
+
+.lessonInfo{
+    line-height: 1.4em;
+    font-size: 1.5em;
+}
+
+.bLessonsBox{
+    display: flex;
+    align-self: center;
+
+}
+
+.bLessons{
+    color: white;
+    cursor: pointer;
+    padding: 1em 2em;
+    margin: 1em;
+    width: 5em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.bLessons:hover{
+    color: rgb(34, 180, 177);
+    background-color: black;
+
+}

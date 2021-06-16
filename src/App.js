@@ -9,7 +9,7 @@ import Quienessomos from './containers/Quienessomos/quienessomos';
 import Esparami from './containers/Esparami/esparami';
 import Horarios from './containers/Horarios/horarios';
 import Tarifas from './containers/Tarifas/tarifas';
-import Contacto from './containers/Contacto/contacto';
+import Contacto from './containers/Contact/contacto';
 
 import Login from './containers/Login/login';
 import Register from './containers/Register/register';
@@ -17,10 +17,12 @@ import Register from './containers/Register/register';
 import Logcoach from './containers/Logroles/Logcoach/logcoach';
 import Logadmin from './containers/Logroles/Logadmin/logadmin';
 import Loguser from './containers/Logroles/Loguser/loguser';
+import Userlessons from './containers/Logroles/userlessons/userlessons';
 
 import Coach from './containers/Coach/coach';
 import Who from './containers/Who/who';
 import Newcoach from './containers/Newcoach/newcoach';
+import Alllessons from './containers/Alllessons/alllessons';
 
 
 
@@ -28,7 +30,7 @@ import Newcoach from './containers/Newcoach/newcoach';
 function App() {
   return (
 
-    <div>
+    <div className="master">
       <BrowserRouter>
 
         <Header/>
@@ -48,8 +50,10 @@ function App() {
             <Route path="/logcoach" exact component={Logcoach}></Route>
             <Route path="/logadmin" exact component={Logadmin}></Route>
             <Route path="/loguser" exact component={Loguser}></Route>
+            <Route path="/userlessons" exact component={Userlessons}></Route>
 
             <Route path="/newcoach" exact component={Newcoach}></Route>
+            <Route path="/alllessons" exact component={Alllessons}></Route>
 
             <Route path="/coach" exact component={Coach}></Route>
             <Route path="/who" exact component={Who}></Route>

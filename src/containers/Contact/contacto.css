@@ -39,6 +39,7 @@ label{
     font-size: 2em;
 }
 input{
+    box-sizing: border-box;
     border: none;
     padding: 1em;
     margin-bottom: 1em;

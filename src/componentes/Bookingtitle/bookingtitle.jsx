@@ -9,7 +9,7 @@ const Bookingtitle = () => {
 
     let history = useHistory();
     const booking = () => {
-        history.push("/contact")
+        history.push("/contacto")
     }
     return (
         <div className="greenBarTitleContainer">

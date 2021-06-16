@@ -22,64 +22,68 @@ const Tarifas = () => {
             <Topjungle id="hide" title="TARIFAS"/> 
             <Titlesection title="2 centros - 1 cuota"/>
             <div id="tarifas">
-                
                 <div id="tarifasContainer">
                     <div id="matricula" className="norwester">MATRÍCULA: 25€ (PAGO ÚNICO)</div>
-                    <div className="titleTarifas norwester">TARIFAS</div>
+
+                    <div className="titleType norwester">TARIFAS</div>
                     <div className="greenBarTarifas bgGreen"></div>
+
                     <div id="blocksContainer" className="tarifasBonosContainer">
 
-                    <div className="blockTarifas dinC">
-                        <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa01})`}}>
-                            <div className="titleTarifas">RX</div>
-                            <div className="subTarifas">MAÑANAS</div>
+                        <div className="blockTarifas dinC">
+                            <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa01})`}}>
+                                <div className="titleTarifas">RX</div>
+                                <div className="subTarifas">MAÑANAS</div>
+                            </div>
+                            <div className="textTarifasContainer">
+                                <div className="priceTarifas txtWhite bgGreen">70€</div>
+                                <div className="detailsTarifas">CLASES ILIMITADAS EN HORARIO DE MAÑANAS Y MEDIO DÍA</div>
+                            </div>
                         </div>
-                        <div className="textTarifasContainer">
-                            <div className="priceTarifas txtWhite bgGreen">70€</div>
-                            <div className="detailsTarifas">CLASES ILIMITADAS EN HORARIO DE MAÑANAS Y MEDIO DÍA</div>
-                        </div>
-                    </div>
 
-                    <div className="blockTarifas dinC">
-                        <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa02})`}}>
-                            <div className="titleTarifas">RX</div>
-                            <div className="subTarifas">COMPLETO</div>
+                        <div className="blockTarifas dinC">
+                            <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa02})`}}>
+                                <div className="titleTarifas">RX</div>
+                                <div className="subTarifas">COMPLETO</div>
+                            </div>
+                            <div className="textTarifasContainer">
+                                <div className="priceTarifas txtWhite bgGreen">80€</div>
+                                <div className="detailsTarifas">CLASES ILIMITADAS EN HORARIO DE DÍA COMPLETO</div>
+                            </div>
                         </div>
-                        <div className="textTarifasContainer">
-                            <div className="priceTarifas txtWhite bgGreen">80€</div>
-                            <div className="detailsTarifas">CLASES ILIMITADAS EN HORARIO DE DÍA COMPLETO</div>
-                        </div>
-                    </div>
 
-                    <div className="blockTarifas dinC">
-                        <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa03})`}}>
-                            <div className="titleTarifas">SCALED</div>
+                        <div className="blockTarifas dinC">
+                            <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa03})`}}>
+                                <div className="titleTarifas">SCALED</div>
+                            </div>
+                            <div className="textTarifasContainer">
+                                <div className="priceTarifas txtWhite bgGreen">70€</div>
+                                <div className="detailsTarifas">12 SESIONES MENSUALES - 30 DÍAS HÁBILES PARA CONSUMIRLAS</div>
+                            </div>
                         </div>
-                        <div className="textTarifasContainer">
-                            <div className="priceTarifas txtWhite bgGreen">70€</div>
-                            <div className="detailsTarifas">12 SESIONES MENSUALES - 30 DÍAS HÁBILES PARA CONSUMIRLAS</div>
-                        </div>
-                    </div>
 
-                    <div className="blockTarifas dinC">
-                        <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa04})`}}>
-                            <div className="titleTarifas">BASIC</div>
+                        <div className="blockTarifas dinC">
+                            <div className="circleTarifas txtWhite" style={{backgroundImage: `url(${Tarifa04})`}}>
+                                <div className="titleTarifas">BASIC</div>
+                            </div>
+                            <div className="textTarifasContainer">
+                                <div className="priceTarifas txtWhite bgGreen">60€</div>
+                                <div className="detailsTarifas">8 SESIONES MENSUALES - 30 DÍAS HÁBILES PARA CONSUMIRLAS</div>
+                            </div>
                         </div>
-                        <div className="textTarifasContainer">
-                            <div className="priceTarifas txtWhite bgGreen">60€</div>
-                            <div className="detailsTarifas">8 SESIONES MENSUALES - 30 DÍAS HÁBILES PARA CONSUMIRLAS</div>
-                        </div>
-                    </div>
 
                     </div>
                 
+                    <div className="detailsTarifas dinC">*TODAS LAS TARIFAS INCLUYEN ACCESO A CLASES DE GIMNÁSTICOS Y HALTEROFILIA</div>
+                
                 </div>
-                <div className="detailsTarifas dinC">*TODAS LAS TARIFAS INCLUYEN ACCESO A CLASES DE GIMNÁSTICOS Y HALTEROFILIA</div>
-            
+                
+                
             
                 <div id="bonosContainer" >
-                    <div className="titleTarifas norwester">BONOS</div>
+                    <div className="titleType norwester">BONOS</div>
                     <div className="greenBarTarifas bgGreen"></div>
+                    
                     <div id="blocksBonoContainer" className="tarifasBonosContainer">
 
                     <div className="blockTarifas dinC">
@@ -122,11 +126,16 @@ const Tarifas = () => {
 
                     </div>
                 </div>
-            
-                <div className="greenBarTarifas bgGreen"></div>
+
+                
+
                 <div className="discountsContainer">
+
+                    <div className="titleType norwester">DESCUENTOS</div>
+                    <div className="greenBarTarifas bgGreen"></div>
+
                     <div className="discountsBox">
-                        <div className="discounts priceTarifas txtWhite bgGreen dinC">DESCUENTOS:</div>
+                        <div className="discounts priceTarifas txtWhite bgGreen dinC">OFERTAS:</div>
                 
                         <div className="detailsDiscounts dinC">3 MESES: 5%</div>
                         <div className="detailsDiscounts dinC">6 MESES: 10%</div>

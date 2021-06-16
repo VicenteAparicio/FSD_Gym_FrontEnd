@@ -1,8 +1,29 @@
 /* TARIFAS */
+#tarifasBonos{
+    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
 
-#tarifas{
+.tarifasBonosContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4em;
+    justify-content: center;
     align-self: center;
+    flex-wrap: wrap;
+
+}
+#tarifas{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
     width: 80%;
+    margin-bottom: 5em;
+
 }
 #matricula{
     margin: 1em 0;
@@ -14,17 +35,15 @@
 }
 #tarifasContainer{
     display: flex;
-    align-self: center;
     flex-direction: column;
-    justify-content: center;
+    width: 80%;
     margin-bottom: 2em;
-    width: 100%;
 }
 .blockTarifas{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 5em;
+    margin: 0 5em 5em 0;
     width: 15em;
 }
 .blockTarifas:last-child{
@@ -46,8 +65,14 @@
     background-size: cover;
 }
 .titleTarifas{
+    text-align: center;
     font-size: 4em;
 }
+
+.titleType {
+    font-size: 4em;
+}
+
 .subTarifas{
     font-size: 2em;
 }
@@ -64,14 +89,7 @@
     font-size: 1.5em;
 }
 
-.tarifasBonosContainer{
-    display: flex;
-    flex-direction: row;
-    margin-top: 4em;
-    align-self: center;
-    flex-wrap: wrap;
-    width: 80%;
-}
+
 
 /* BONOS */
 #bonosContainer{
@@ -80,7 +98,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 4em 0;
-    width: 100%;
+    width: 80%;
 }
 
 .circleBonos{
@@ -107,33 +125,29 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 10vmax;
-    height: 10vmax;
+    width: 10em;
+    height: 10em;
 }
 .discountsContainer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    align-self: center;
+    width: 80%;
 }
 .discountsBox{
-    margin: 4em 0 4em;
+    margin: 4em 0 4em 4vmax;
     display: flex;
     flex-direction: column;
     width: 80%;
 }
 .discounts{
-    width: 25vmax;
+    max-width: 30vmax;
 }
 
 .detailsDiscounts{
     margin-left: 1em;
     font-size: 2em;
 }
-
-
-
-
 
 
 
@@ -156,4 +170,36 @@
         flex-direction: column;
         align-items: center;
     }
+    .tarifasBonosContainer{
+        flex-direction: column;
+    }
+
+    #tarifasContainer{
+        width: 80%;
+        align-self: center;
+    }
+    #bonosContainer{
+        width: 80%;
+        align-self: center;
+    }
+    .discountsBox{
+
+        align-items: center;
+        width: 100%;
+        margin: 4em 0;
+    }
+    .detailsDiscounts{
+        margin: 0;
+    }
+
+    .titleType{
+        font-size: 3em;
+        text-align: center;
+        margin: 0;
+    }
+
+    .detailsTarifas{
+        align-self: center;
+    }
+   
 }
