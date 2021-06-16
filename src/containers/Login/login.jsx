@@ -1,15 +1,18 @@
 // IMPORT MOTORS
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
+import {connect} from 'react-redux';
 import axios from 'axios';
 // IMPORT COMPONENTS
 import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
+// IMPORT ACTIONS
+import {LOGIN} from '../../redux/types';
 // IMPORT STYLES
 import '../../assets/fontcolors.css';
 import './login.css';
 
-const Loginer = () => {
+const Loginer = (props) => {
 
     let history = useHistory();
 
@@ -50,8 +53,10 @@ const Loginer = () => {
                 
                 
                 if (loguser){          
-                    localStorage.setItem("token", loguser.data.token);
-                    localStorage.setItem("user", JSON.stringify(loguser.data.user));
+                    // localStorage.setItem("token", loguser.data.token);
+                    // localStorage.setItem("user", JSON.stringify(loguser.data.user));
+
+                    props.dispatch({type:LOGIN,payload:loguser.data});
 
                     console.log(loguser.data.token);
                     console.log(JSON.stringify(loguser.data.user));
@@ -66,8 +71,10 @@ const Loginer = () => {
                 let logcoach = await axios.post('http://localhost:3005/coach/login', body);
 
                 if (logcoach){
-                    localStorage.setItem("tokencoach", logcoach.data.token);
-                    localStorage.setItem("coach", JSON.stringify(logcoach.data.coach));
+                    // localStorage.setItem("tokencoach", logcoach.data.token);
+                    // localStorage.setItem("coach", JSON.stringify(logcoach.data.coach));
+
+                    props.dispatch({type:LOGIN,payload:logcoach.data});
 
                     setTimeout (()=>{
                         history.push("/logcoach")
@@ -79,11 +86,11 @@ const Loginer = () => {
                 let logadmin = await axios.post('http://localhost:3005/user/login', body);
 
                 if (logadmin.data.user.isAdmin === true){
-                    localStorage.setItem("token", logadmin.data.token);
-                    localStorage.setItem("user", JSON.stringify(logadmin.data.user));
+                    // localStorage.setItem("token", logadmin.data.token);
+                    // localStorage.setItem("user", JSON.stringify(logadmin.data.user));
 
                     //Guardo en RDX
-                    props.dispatch({type:LOGIN,payload:data});
+                    props.dispatch({type:LOGIN,payload:logadmin.data});
 
                     setTimeout (()=>{
                         history.push("/logadmin")

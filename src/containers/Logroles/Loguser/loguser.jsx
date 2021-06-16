@@ -1,32 +1,34 @@
+// IMPORT MOTORS
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-
+import {connect} from 'react-redux';
+// IMPORT COMPONENTS
 import Topjungle from '../../../components/Topjungle/topjungle';
 import Titlesection from '../../../components/Titlesection/titlesection';
-
+// IMPORT STYLES
 import './loguser.css';
 import '../userlessons/userlessons'
 
-const Loguser = () => {
+const Loguser = (props) => {
 
     let history = useHistory();
 
     // HOOKS
-    const [userData, setUserData] = useState({
-        token: localStorage.getItem('token'),
-        user: JSON.parse(localStorage.getItem('user'))
-    });
+    // const [userData, setUserData] = useState({
+    //     token: localStorage.getItem('token'),
+    //     user: JSON.parse(localStorage.getItem('user'))
+    // });
    
 
-    useEffect(()=>{
-        console.log(userData.token)
-        console.log(userData.user.nick)
-    },[]);
+    // useEffect(()=>{
+    //     console.log(userData.token)
+    //     console.log(userData.user.nick)
+    // },[]);
     
     const Logout = () => {
         localStorage.clear();
-        setUserData("");
+        // setUserData("");
         history.push("/login")
     }
 
@@ -37,18 +39,18 @@ const Loguser = () => {
 
     }
 
-    if (userData.token){
+    if (props.logData.token){
         return (
             <div className="containerLog">
                 <Topjungle id="hide" title="BIENVENIDO"/>
                 <Titlesection title="USER"/>
                 <div className="infoLog bgGreen txtWhite dinC">
-                    <div className="nameInfo norwester">{userData.user.name}</div>
-                    <div className="dataInfo">{userData.user.nick}</div>
-                    <div className="dataInfo">{userData.user.email}</div>
-                    <div className="dataInfo">{userData.user.birthdate}</div>
-                    <div className="dataInfo">{userData.user.city}</div>
-                    <div className="dataInfo">{userData.user.country}</div>
+                    <div className="nameInfo norwester">{props.logData.user.name}</div>
+                    <div className="dataInfo">{props.logData.user.nick}</div>
+                    <div className="dataInfo">{props.logData.user.email}</div>
+                    <div className="dataInfo">{props.logData.user.birthdate}</div>
+                    <div className="dataInfo">{props.logData.user.city}</div>
+                    <div className="dataInfo">{props.logData.user.country}</div>
                 </div>
                 <div className="infoLog txtWhite dinC">
                     <div className="optionsButtons bgGreen" onClick={()=>MyLessons()}>MY LESSONS</div>
@@ -67,4 +69,6 @@ const Loguser = () => {
     }
 }
 
-export default Loguser;
+export default connect((state)=>(
+    {logData:state.credentials}
+))(Loguser);

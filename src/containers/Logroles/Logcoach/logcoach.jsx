@@ -1,34 +1,34 @@
-
+// IMPORT MOTORS
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
-
+import {connect} from 'react-redux';
+// IMPORT COMPONENTS
 import Topjungle from '../../../components/Topjungle/topjungle';
 import Titlesection from '../../../components/Titlesection/titlesection';
-
 import Modifycoach from '../../../components/options/modify/Modifycoach/modifycoach';
-
+// IMPORT STYLE
 import './logcoach.css';
 
-const Logcoach = () => {
+const Logcoach = (props) => {
 
     let history = useHistory();
 
     // HOOKS
     const [credentials, setCredentials] = useState({name:'',email:'',password:'',birthdate:'',country:'',city:'',isActive:''});
 
-    const [coachData, setCoachData] = useState({
-        token: localStorage.getItem('tokencoach'),
-        coach: JSON.parse(localStorage.getItem('coach'))
-    });
+    // const [coachData, setCoachData] = useState({
+    //     token: localStorage.getItem('tokencoach'),
+    //     coach: JSON.parse(localStorage.getItem('coach'))
+    // });
    
-    const [visual, setVisual] = useState('');
+    // const [visual, setVisual] = useState('');
 
-    useEffect(()=>{
-        console.log(coachData.token)
-        console.log(coachData.coach.name)
+    // useEffect(()=>{
+    //     console.log(coachData.token)
+    //     console.log(coachData.coach.name)
 
-    },[]);
+    // },[]);
 
     
     // Handler
@@ -39,31 +39,31 @@ const Logcoach = () => {
     // FUNCTIONS (OPTIONS)
     const Logout = () => {
         localStorage.clear();
-        setCoachData("");
+        // setCoachData("");
         history.push("/login")
     }
 
     const Modify = (show) => {
         
-        let body = {
-            name: credentials.name,
-            email: credentials.email,
-            password: credentials.password,
-            birthdate: credentials.birthdate,
-            country: credentials.country,
-            city: credentials.city,
-            isActive: credentials.isActive
-        }
+        // let body = {
+        //     name: credentials.name,
+        //     email: credentials.email,
+        //     password: credentials.password,
+        //     birthdate: credentials.birthdate,
+        //     country: credentials.country,
+        //     city: credentials.city,
+        //     isActive: credentials.isActive
+        // }
 
-        axios
-        .post('http://localhost:3005/coach/modify', body)
-        .then((res)=>{})
-        .catch((error)=>{
-            console.log(error);
-        });  
+        // axios
+        // .post('http://localhost:3005/coach/modify', body)
+        // .then((res)=>{})
+        // .catch((error)=>{
+        //     console.log(error);
+        // });  
     }
 
-    if (coachData.token){
+    if (props.logData.token){
         return (
             <div className="containerLog">
 
@@ -71,11 +71,11 @@ const Logcoach = () => {
                 <Titlesection title='COACH'/>
                 
                 <div className="infoLog bgGreen txtWhite dinC">
-                    <div className="nameInfo norwester">{coachData.coach.name}</div>                    
-                    <div className="dataInfo">{coachData.coach.level}</div>
-                    <div className="dataInfo">{coachData.coach.tasks}</div>
-                    <div className="dataInfo">{coachData.coach.instagram}</div>
-                    <div className="dataInfo">{coachData.coach.birthdate}</div>
+                    <div className="nameInfo norwester">{props.logData.coach.name}</div>                    
+                    <div className="dataInfo">{props.logData.coach.level}</div>
+                    <div className="dataInfo">{props.logData.coach.tasks}</div>
+                    <div className="dataInfo">{props.logData.coach.instagram}</div>
+                    <div className="dataInfo">{props.logData.coach.birthdate}</div>
                 </div>
                 <div className="infoLog txtWhite dinC">
                     <div className="optionsButtons bgGreen" onClick={()=>Modifycoach()}>Modify</div>
@@ -94,4 +94,6 @@ const Logcoach = () => {
     }
 }
 
-export default Logcoach;
+export default connect((state)=>(
+    {logData:state.credentials}
+))(Logcoach);
