@@ -1,9 +1,10 @@
 import {combineReducers} from 'redux';
 
 import credentials from './credentials-reducer';
+import destiny from './topjungle-reducer';
 
 const rootReducer = combineReducers({
-    credentials,
+    credentials, destiny
 });
 
 export default rootReducer;
