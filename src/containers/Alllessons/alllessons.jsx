@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
-import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 
 import './alllessons.css';
@@ -41,7 +40,6 @@ const Alllessons = () => {
 
             return (
                 <div className="lessonsContainer">
-                    <Topjungle id="hide" title="MANAGE LESSONS"/>
                     <Titlesection title='ALL LESSONS'/>
                     <div className="lessonsBox">
                         {lessonInfo.map((lesson, index)=>(

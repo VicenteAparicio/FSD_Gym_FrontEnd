@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './containers/Home/home';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
+import Topjungle from './components/Topjungle/topjungle';
 import Quienessomos from './containers/Quienessomos/quienessomos';
 import Esparami from './containers/Esparami/esparami';
 import Horarios from './containers/Horarios/horarios';
@@ -34,6 +35,7 @@ function App() {
       <BrowserRouter>
 
         <Header/>
+        <Topjungle/>
 
         <Switch>
           <div className="switchContainer">

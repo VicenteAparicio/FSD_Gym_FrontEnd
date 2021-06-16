@@ -1,7 +1,6 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 import Midbanner from '../../components/Midbanner/midbanner';
 import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
@@ -16,7 +15,6 @@ import './home.css';
 const Home = () => {
     return (
         <section id="home" className="sections">
-            <Topjungle title="PONTE EN FORMA CON NOSOTROS"/>
             <Titlesection title="CONSIGUE TU MEJOR VERSIÓN"/>
             <Gallery/>
             <Mapshome/>

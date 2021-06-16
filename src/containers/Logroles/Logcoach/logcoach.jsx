@@ -4,7 +4,6 @@ import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 // IMPORT COMPONENTS
-import Topjungle from '../../../components/Topjungle/topjungle';
 import Titlesection from '../../../components/Titlesection/titlesection';
 import Modifycoach from '../../../components/options/modify/Modifycoach/modifycoach';
 // IMPORT STYLE
@@ -66,8 +65,6 @@ const Logcoach = (props) => {
     if (props.logData.token){
         return (
             <div className="containerLog">
-
-                <Topjungle id="hide" title="BIENVENIDO"/>
                 <Titlesection title='COACH'/>
                 
                 <div className="infoLog bgGreen txtWhite dinC">

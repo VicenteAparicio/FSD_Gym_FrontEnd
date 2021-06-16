@@ -1,7 +1,6 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../components/Topjungle/topjungle';
 import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
 import Midbanner from '../../components/Midbanner/midbanner';
 
@@ -16,7 +15,6 @@ import './esparami.css';
 const Esparami = () => {
     return (
         <section id="forMe" className="sections">
-            <Topjungle id="hide" title="¿ES CROSSTRAINING PARA MÍ?"/> 
             <div id="forMeContainer">
                 <Midbanner/>
             </div>

@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 // IMPORT COMPONENTS
-import Topjungle from '../../../components/Topjungle/topjungle';
 import Titlesection from '../../../components/Titlesection/titlesection';
 import Loginnav from '../../../components/Loginnav/loginnav';
 // IMPORT STYLE
@@ -49,7 +48,6 @@ const Logadmin = (props) => {
         return (
             <div className="containerLog">
 
-                <Topjungle id="hide" title="BIENVENIDO"/>
                 <Titlesection title="ADMIN"/>
 
                 <div className="infoLog bgGreen txtWhite dinC">

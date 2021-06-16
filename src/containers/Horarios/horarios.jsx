@@ -1,7 +1,6 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
 
@@ -19,7 +18,6 @@ const Horarios = () => {
     return (
 
         <section id="horarios" className="sections">
-            <Topjungle id="hide" title="HORARIOS"/>
             <Titlesection title="ES HORA DE ENTRENAR"/>
             <div id="agendaContainer" className="agendaTable" style={{backgroundImage: `url(${Background})`}}>
                 <div id="agendaRuzafa" className="agenda">

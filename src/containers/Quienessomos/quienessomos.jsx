@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
 
@@ -17,7 +16,6 @@ const Quienessomos = () => {
 
     return (
         <section id="whoWeAre" className="sections">
-            <Topjungle id="hide" title="¿QUIÉNES SOMOS?"/>
             <Titlesection title="NUESTRO EQUIPO"/> 
             <div id="whoWeAreContainer">
 

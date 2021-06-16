@@ -4,7 +4,6 @@ import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 import axios from 'axios';
 // IMPORT COMPONENTS
-import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 // IMPORT ACTIONS
 import {LOGIN} from '../../redux/types';
@@ -107,7 +106,7 @@ const Loginer = (props) => {
     return (
 
         <div className="containerLogin">
-            <Topjungle id="hide" title="ENTRA EN TU PERFIL"/>
+            
             <Titlesection title="LOGIN"/>
             {/* <pre>{JSON.stringify(credentials,null,2)}</pre> */}
             <div className="boxLogin bgGreen">

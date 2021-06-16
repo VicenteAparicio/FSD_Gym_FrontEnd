@@ -10,12 +10,12 @@
 }
 
 .bigPic{
-    height: 60vmin;
+    width: 50vmax;
 }
 
 .bigPicture{
     align-self: center;
-    height: 100%;
+    width: 100%;
 }
 
 #smallPics{
@@ -36,7 +36,8 @@
 }
 
 .sPGallery01{
-    height: 10vmin;
+    height: 6vmax;
+    
     justify-self: flex-start;
     align-self: flex-start;
     margin: 0 .5em .5em 0;

@@ -1,7 +1,6 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
 
@@ -19,7 +18,6 @@ const Tarifas = () => {
     return (
         <section id="tarifasBonos" className="sections">
 
-            <Topjungle id="hide" title="TARIFAS"/> 
             <Titlesection title="2 centros - 1 cuota"/>
             <div id="tarifas">
                 <div id="tarifasContainer">
