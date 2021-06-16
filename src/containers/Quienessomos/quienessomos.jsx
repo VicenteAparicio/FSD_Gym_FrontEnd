@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Topjungle from '../../componentes/Topjungle/topjungle';
-import Titlesection from '../../componentes/Titlesection/titlesection';
-import Bookingtitle from '../../componentes/Bookingtitle/bookingtitle';
+import Topjungle from '../../components/Topjungle/topjungle';
+import Titlesection from '../../components/Titlesection/titlesection';
+import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
 
 import Coachpic01 from '../../assets/imgs/team/josejuan.png';
 import Coachpic02 from '../../assets/imgs/team/jesusart.png';

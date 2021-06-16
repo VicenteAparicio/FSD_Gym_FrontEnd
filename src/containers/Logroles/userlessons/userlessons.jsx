@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
-import Topjungle from '../../../componentes/Topjungle/topjungle';
-import Titlesection from '../../../componentes/Titlesection/titlesection';
+import Topjungle from '../../../components/Topjungle/topjungle';
+import Titlesection from '../../../components/Titlesection/titlesection';
 
 import './userlessons.css';
 import '../Loguser/loguser';

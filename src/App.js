@@ -3,8 +3,8 @@ import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import Home from './containers/Home/home';
-import Header from './componentes/Header/header';
-import Footer from './componentes/Footer/footer';
+import Header from './components/Header/header';
+import Footer from './components/Footer/footer';
 import Quienessomos from './containers/Quienessomos/quienessomos';
 import Esparami from './containers/Esparami/esparami';
 import Horarios from './containers/Horarios/horarios';

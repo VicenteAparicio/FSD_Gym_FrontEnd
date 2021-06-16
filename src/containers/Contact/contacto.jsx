@@ -1,7 +1,7 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../componentes/Topjungle/topjungle';
+import Topjungle from '../../components/Topjungle/topjungle';
 
 import ruzafaGreen from '../../assets/logos/ruzafaGreen.png';
 import avPuertoGreen from '../../assets/logos/avPuertoGreen.png';

@@ -1,9 +1,9 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../componentes/Topjungle/topjungle';
-import Bookingtitle from '../../componentes/Bookingtitle/bookingtitle';
-import Midbanner from '../../componentes/Midbanner/midbanner';
+import Topjungle from '../../components/Topjungle/topjungle';
+import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
+import Midbanner from '../../components/Midbanner/midbanner';
 
 import Leftbanner from '../../assets/banners/crosstraining23.jpg';
 import Centerbanner from '../../assets/banners/crosstraining22.jpg';

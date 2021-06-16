@@ -3,10 +3,10 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../../componentes/Topjungle/topjungle';
-import Titlesection from '../../../componentes/Titlesection/titlesection';
+import Topjungle from '../../../components/Topjungle/topjungle';
+import Titlesection from '../../../components/Titlesection/titlesection';
 
-import Modifycoach from '../../../componentes/options/modify/Modifycoach/modifycoach';
+import Modifycoach from '../../../components/options/modify/Modifycoach/modifycoach';
 
 import './logcoach.css';
 

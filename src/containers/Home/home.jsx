@@ -1,13 +1,13 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../componentes/Topjungle/topjungle';
-import Titlesection from '../../componentes/Titlesection/titlesection';
-import Midbanner from '../../componentes/Midbanner/midbanner';
-import Bookingtitle from '../../componentes/Bookingtitle/bookingtitle';
-import Gallery from '../../componentes/Gallery/gallery';
-import Mapshome from '../../componentes/Mapshome/mapshome';
-import Instagram from '../../componentes/Instagram/instagram';
+import Topjungle from '../../components/Topjungle/topjungle';
+import Titlesection from '../../components/Titlesection/titlesection';
+import Midbanner from '../../components/Midbanner/midbanner';
+import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
+import Gallery from '../../components/Gallery/gallery';
+import Mapshome from '../../components/Mapshome/mapshome';
+import Instagram from '../../components/Instagram/instagram';
 
 
 import '../../assets/fontcolors.css';

@@ -1,9 +1,9 @@
 import React from 'react';
 // import {useHistory} from 'react-router-dom';
 
-import Topjungle from '../../componentes/Topjungle/topjungle';
-import Titlesection from '../../componentes/Titlesection/titlesection';
-import Bookingtitle from '../../componentes/Bookingtitle/bookingtitle';
+import Topjungle from '../../components/Topjungle/topjungle';
+import Titlesection from '../../components/Titlesection/titlesection';
+import Bookingtitle from '../../components/Bookingtitle/bookingtitle';
 
 import Tarifa01 from '../../assets/imgs/gallery01/crosstraining02.jpg';
 import Tarifa02 from '../../assets/imgs/gallery01/crosstraining01.jpg';
