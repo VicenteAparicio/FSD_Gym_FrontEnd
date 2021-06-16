@@ -15,48 +15,48 @@ import './instagram.css';
 const Instagram = () => {
 
     return (
-        <div id="bottomHome" class="homeContainer01">
+        <div id="bottomHome" className="homeContainer01">
             <div id="igFollowContainer">
                         <div id="containerCircleLogo">
-                            <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img id="logoIG" src={LogoIg} alt="Logotipo Crosstraining Valencia" title="Crosstraining Valencia"/></a>
+                            <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img id="logoIG" src={LogoIg} alt="Logotipo Crosstraining Valencia" title="Crosstraining Valencia"/></a>
                         </div>
                         <div id="boxTextLogo">
-                            <div id="topTextIG" class="norwester">SÍGUENOS EN INSTAGRAM</div>
-                            <div id="botTextIG" class="norwester">@crosstrainingvalencia</div>
+                            <div id="topTextIG" className="norwester">SÍGUENOS EN INSTAGRAM</div>
+                            <div id="botTextIG" className="norwester">@crosstrainingvalencia</div>
                         </div>
                     </div>
 
             <div id="gallery03">
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig01}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig01}/></a>
                 </div>
 
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig02}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig02}/></a>
                 </div>
 
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig03}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig03}/></a>
                 </div>
 
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig04}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig04}/></a>
                 </div>
 
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig05}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig05}/></a>
                 </div>
 
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig06}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig06}/></a>
                 </div>
 
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig07}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig07}/></a>
                 </div>
 
-                <div class="igBox">
-                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank"><img class="gallery03Pics" alt="Crosstraining Instagram Photo" title="Crosstraining Instagram" src={Ig08}/></a>
+                <div className="igBox">
+                    <a href="https://www.instagram.com/crosstrainingvalencia/" target="_blank" rel="noreferrer"><img className="gallery03Pics" alt="Crosstraining Instagram" title="Crosstraining Instagram" src={Ig08}/></a>
                 </div>
             </div>
         </div>

@@ -24,15 +24,15 @@ const Horarios = () => {
             <div id="agendaContainer" className="agendaTable" style={{backgroundImage: `url(${Background})`}}>
                 <div id="agendaRuzafa" className="agenda">
                     <div className="logoAgenda">
-                        <img className="imgAgenda" src={Ruzafa}/>
+                        <img alt="Logo Ruzafa" className="imgAgenda" src={Ruzafa}/>
                     </div>
-                    <img className="tabla" src={Agenda01}/>
+                    <img alt="Agenda Ruzafa" className="tabla" src={Agenda01}/>
                 </div>
                 <div id="agendaPuerto" className="agenda">
                     <div className="logoAgenda">
-                        <img className="imgAgenda" src={AvPuerto}/>
+                        <img alt="Logo Av. Puerto" className="imgAgenda" src={AvPuerto}/>
                     </div>
-                    <img className="tabla" src={Agenda02}/>
+                    <img alt="Agenda Av. Puerto" className="tabla" src={Agenda02}/>
                 </div>
             </div>
             <div id="modelContainer">

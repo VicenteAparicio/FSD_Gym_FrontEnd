@@ -29,7 +29,7 @@ const Loginnav = (props) => {
         return (
             <div className="vistaHeader">
                 <div className="nav">
-                    <div className="tapHeader" onClick={()=>takeMe("/profile")}>{props.credentials?.user.name}</div>
+                    <div className="tapHeader" onClick={()=>takeMe("/logadmin")}>{props.credentials?.user.name}</div>
                     <div className="tapHeader" onClick={()=>logOut()}>Log Out</div>
                 </div>
             </div>

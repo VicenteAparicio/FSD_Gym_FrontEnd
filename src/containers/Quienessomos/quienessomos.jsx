@@ -16,72 +16,72 @@ import './quienessomos.css';
 const Quienessomos = () => {
 
     return (
-        <section id="whoWeAre" class="sections">
+        <section id="whoWeAre" className="sections">
             <Topjungle id="hide" title="¿QUIÉNES SOMOS?"/>
             <Titlesection title="NUESTRO EQUIPO"/> 
             <div id="whoWeAreContainer">
 
                 <div id="profilesContainer">
-                    <div class="profiles">
-                        <div class="profilePicBox">
-                            <img class="profilePic" src={Coachpic01} alt="Jose Juan Albert" title="Jose Juan Albert"/>
+                    <div className="profiles">
+                        <div className="profilePicBox">
+                            <img className="profilePic" src={Coachpic01} alt="Jose Juan Albert" title="Jose Juan Albert"/>
                         </div>
-                        <div class="profileInfo">
-                            <div class="profileName txtGreen norwester">JOSE JUAN ALBERT - JJ</div>
-                            <div class="profileData dinC">CF COACH LEVEL 1</div>
-                            <div class="profileData dinC">ENTRENADOR DE HALTEROFILIA - FEH</div>
-                            <div class="profileData dinC">HEAD COACH</div>
-                            <div class="profileData dinC">DISEÑADOR GRÁFICO</div>
-                            <div class="containerIG">
-                                <img class="igLogo" src={igLogo}/>
-                                <div class="profileIG norwester">@JOSEJUANALB</div>
+                        <div className="profileInfo">
+                            <div className="profileName txtGreen norwester">JOSE JUAN ALBERT - JJ</div>
+                            <div className="profileData dinC">CF COACH LEVEL 1</div>
+                            <div className="profileData dinC">ENTRENADOR DE HALTEROFILIA - FEH</div>
+                            <div className="profileData dinC">HEAD COACH</div>
+                            <div className="profileData dinC">DISEÑADOR GRÁFICO</div>
+                            <div className="containerIG">
+                                <img alt="Logo Instagram" className="igLogo" src={igLogo}/>
+                                <div className="profileIG norwester">@JOSEJUANALB</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="profiles">
-                        <div class="profilePicBox">
-                            <img class="profilePic" src={Coachpic02} alt="Jesús Arteaga" title="Jesús Arteaga"/>
+                    <div className="profiles">
+                        <div className="profilePicBox">
+                            <img className="profilePic" src={Coachpic02} alt="Jesús Arteaga" title="Jesús Arteaga"/>
                         </div>
-                        <div class="profileInfo">
-                            <div class="profileName txtGreen norwester">JESÚS ARTEAGA</div>
-                            <div class="profileData dinC">CF COACH LEVEL 1</div>
-                            <div class="profileData dinC">HEAD COACH</div>
-                            <div class="profileData dinC">ENCARGADO</div>
-                            <div class="containerIG">
-                                <img class="igLogo" src={igLogo}/>
-                                <div class="profileIG norwester">@LITTLE_ONCE_CF</div>
+                        <div className="profileInfo">
+                            <div className="profileName txtGreen norwester">JESÚS ARTEAGA</div>
+                            <div className="profileData dinC">CF COACH LEVEL 1</div>
+                            <div className="profileData dinC">HEAD COACH</div>
+                            <div className="profileData dinC">ENCARGADO</div>
+                            <div className="containerIG">
+                                <img alt="Logo Instagram" className="igLogo" src={igLogo}/>
+                                <div className="profileIG norwester">@LITTLE_ONCE_CF</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="profiles">
-                        <div class="profilePicBox">
-                            <img class="profilePic" src={Coachpic03} alt="Diego Marcone" title="Diego Marcone"/>
+                    <div className="profiles">
+                        <div className="profilePicBox">
+                            <img className="profilePic" src={Coachpic03} alt="Diego Marcone" title="Diego Marcone"/>
                         </div>
-                        <div class="profileInfo">
-                            <div class="profileName txtGreen norwester">DIEGO MARCONE</div>
-                            <div class="profileData dinC">CF COACH LEVEL 1</div>
-                            <div class="profileData dinC">HEAD COACH</div>
-                            <div class="profileData dinC">SOCIAL MEDIA</div>
-                            <div class="containerIG">
-                                <img class="igLogo" src={igLogo}/>
-                                <div class="profileIG norwester">@DMARBONE1111</div>
+                        <div className="profileInfo">
+                            <div className="profileName txtGreen norwester">DIEGO MARCONE</div>
+                            <div className="profileData dinC">CF COACH LEVEL 1</div>
+                            <div className="profileData dinC">HEAD COACH</div>
+                            <div className="profileData dinC">SOCIAL MEDIA</div>
+                            <div className="containerIG">
+                                <img alt="Logo Instagram" className="igLogo" src={igLogo}/>
+                                <div className="profileIG norwester">@DMARBONE1111</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="profiles">
-                        <div class="profilePicBox">
-                            <img class="profilePic" src={Coachpic04} alt="María Segarra" title="María Segarra"/>
+                    <div className="profiles">
+                        <div className="profilePicBox">
+                            <img className="profilePic" src={Coachpic04} alt="María Segarra" title="María Segarra"/>
                         </div>
-                        <div class="profileInfo">
-                            <div class="profileName txtGreen norwester">MARÍA SEGARRA</div>
-                            <div class="profileData dinC">CF COACH LEVEL 1</div>
-                            <div class="profileData dinC">HEAD COACH</div>
-                            <div class="containerIG">
-                                <img class="igLogo" src={igLogo}/>
-                                <div class="profileIG norwester">@MARÍASEGARRA3</div>
+                        <div className="profileInfo">
+                            <div className="profileName txtGreen norwester">MARÍA SEGARRA</div>
+                            <div className="profileData dinC">CF COACH LEVEL 1</div>
+                            <div className="profileData dinC">HEAD COACH</div>
+                            <div className="containerIG">
+                                <img alt="Logo Instagram" className="igLogo" src={igLogo}/>
+                                <div className="profileIG norwester">@MARÍASEGARRA3</div>
                             </div>
                         </div>
                     </div>

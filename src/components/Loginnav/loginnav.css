@@ -5,7 +5,7 @@
     justify-content: flex-end;
     align-items: center;
     height: 5em;
-    background-color: grey;
+    background-color: black;
     padding: 0 3em;
     transition: 0.3s;
     cursor: pointer;
@@ -20,7 +20,7 @@
 }
 
 .tapHeader:hover{
-    color: black;
+    color: rgb(34, 180, 177);
     transition: 0.3s;
     margin-left: 2em;
 }
