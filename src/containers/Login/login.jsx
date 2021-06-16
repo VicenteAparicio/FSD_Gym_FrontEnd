@@ -1,10 +1,11 @@
+// IMPORT MOTORS
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-
+// IMPORT COMPONENTS
 import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
-
+// IMPORT STYLES
 import '../../assets/fontcolors.css';
 import './login.css';
 
@@ -81,6 +82,9 @@ const Loginer = () => {
                     localStorage.setItem("token", logadmin.data.token);
                     localStorage.setItem("user", JSON.stringify(logadmin.data.user));
 
+                    //Guardo en RDX
+                    props.dispatch({type:LOGIN,payload:data});
+
                     setTimeout (()=>{
                         history.push("/logadmin")
                     }, 500)
@@ -118,4 +122,4 @@ const Loginer = () => {
 
 }
 
-export default Loginer;
+export default connect()(Loginer);
