@@ -50,8 +50,9 @@ const Logadmin = (props) => {
             <div className="containerLog">
 
                 <Titlesection title="ADMIN"/>
-
-                <Admindata/>
+                <div className="adminMenu">
+                    <Admindata/>
+                </div>
                 
 
                 <Loginnav/>

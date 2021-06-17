@@ -42,7 +42,7 @@ const Userlessons = (props) => {
         }
 
         try{
-            let res = await axios.post('http://localhost:3005/user/all_my_lessons', body, {headers: {'Authorization': `Basic ${props.logData.user.token}`}});
+            let res = await axios.post('http://localhost:3005/user/all_my_lessons', body, {headers: {'Authorization': `Basic ${props.logData.token}`}});
             console.log("Este es el resultado ",res.data)
             setLessonInfo(res.data)
         } catch (err) {
