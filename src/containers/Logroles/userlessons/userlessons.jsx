@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
+import {connect} from 'react-redux';
 
 import Topjungle from '../../../components/Topjungle/topjungle';
 import Titlesection from '../../../components/Titlesection/titlesection';
@@ -8,28 +9,24 @@ import Titlesection from '../../../components/Titlesection/titlesection';
 import './userlessons.css';
 import '../Loguser/loguser';
 
-const Userlessons = () => {
+const Userlessons = (props) => {
 
     let history = useHistory();
 
-    const [userData, setUserData] = useState({
+   /*  const [userData, setUserData] = useState({
         token: localStorage.getItem('token'),
         user: JSON.parse(localStorage.getItem('user'))
-    });
+    }); */
 
     const [lessonInfo, setLessonInfo] = useState([]);
 
     useEffect(()=>{
-   /*      console.log(userData.token)
-        console.log(userData.user.nick) */
-       /*  console.log("Hola useEffect") */
         MyLessons();
         
     },[]);
 
     const Logout = () => {
         localStorage.clear();
-       /*  setUserData(""); */
         history.push("/login")
     }
 
@@ -39,14 +36,13 @@ const Userlessons = () => {
 
     const MyLessons = async () => {
 
-        console.log("Entramos a MyLessons");
+
         let body = {
-            userId : userData.user._id,
+            userId: props.logData.user._id
         }
 
         try{
-            console.log("A continuación viene res etc")
-            let res = await axios.post('http://localhost:3005/user/all_my_lessons', body, {headers: {'Authorization': `Basic ${userData.token}`}});
+            let res = await axios.post('http://localhost:3005/user/all_my_lessons', body, {headers: {'Authorization': `Basic ${props.logData.user.token}`}});
             console.log("Este es el resultado ",res.data)
             setLessonInfo(res.data)
         } catch (err) {
@@ -55,7 +51,7 @@ const Userlessons = () => {
     }
 
 
-    if (userData.user){
+    if (props.logData.user){
 
             return (
                 <div className="lessonsContainer">
@@ -92,4 +88,6 @@ const Userlessons = () => {
 
 
 
-export default Userlessons;
+export default connect((state)=>(
+    {logData:state.credentials}
+))(Userlessons);
