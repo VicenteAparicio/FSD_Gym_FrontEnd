@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-
+import {connect} from 'react-redux';
 import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 
 import '../../assets/fontcolors.css';
 import './newcoach.css';
 
-const Newcoach = () => {
+const Newcoach = (props) => {
 
     let history = useHistory();
 
@@ -18,16 +18,16 @@ const Newcoach = () => {
 
     const [msgError, setMensajeError] = useState('');
 
-    const [adminData, setAdminData] = useState({
-        token: localStorage.getItem('token'),
-        user: JSON.parse(localStorage.getItem('user'))
-    });
+    // const [adminData, setAdminData] = useState({
+    //     token: localStorage.getItem('token'),
+    //     user: JSON.parse(localStorage.getItem('user'))
+    // });
     
 
     useEffect(()=>{
-        console.log(adminData.token)
-        console.log(adminData.user.name)
-        console.log(adminData.user.isAdmin)
+        // console.log(adminData.token)
+        // console.log(adminData.user.name)
+        // console.log(adminData.user.isAdmin)
 
     },[]);
 
@@ -78,7 +78,7 @@ const Newcoach = () => {
             lessons: credentials.lessons
         }
 
-        let tokenization = adminData.token;
+        let tokenization = props.logData.token;
         
         axios
             .post('http://localhost:3005/coach/newcoach', body, {headers: {'Authorization': `Basic ${tokenization}`}})
@@ -99,11 +99,10 @@ const Newcoach = () => {
     
 
     
-    if (adminData.user.isAdmin == true){
+    if (props.logData.user.isAdmin == true){
         return (
 
             <div className="containerRegister">
-                <Topjungle id="hide" title="MANAGE NEW COACH"/>
                 <Titlesection title='NEW COACH'/>
 
                 {/* <pre>{JSON.stringify(credentials,null,2)}</pre> */}
@@ -157,4 +156,6 @@ const Newcoach = () => {
 
 }
 
-export default Newcoach;
+export default connect((state)=>(
+    {logData:state.credentials}
+))(Newcoach);
