@@ -2,15 +2,11 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
-// IMPORT COMPONENTS
-import Titlesection from '../../../components/Titlesection/titlesection';
-import Admindata from '../../../components/Admindata/admindata';
-import Loginnav from '../../../components/Loginnav/loginnav';
 // IMPORT STYLE
-import './logadmin.css';
+import './admindata.css';
 
 
-const Logadmin = (props) => {
+const Admindata = (props) => {
 
     let history = useHistory();
 
@@ -49,13 +45,19 @@ const Logadmin = (props) => {
         return (
             <div className="containerLog">
 
-                <Titlesection title="ADMIN"/>
-
-                <Admindata/>
-                
-
-                <Loginnav/>
-                
+                <div className="infoLog bgGreen txtWhite dinC">
+                    <div className="nameInfo">{props.logData.user.name}</div>                    
+                    <div className="dataInfo">{props.logData.user.email}</div>
+                    <div className="dataInfo">{props.logData.user.country}</div>
+                    <div className="dataInfo">{props.logData.user.city}</div>
+                    <div className="dataInfo">{props.logData.user.birthdate}</div>
+                </div>
+                <div className="infoLog txtWhite dinC">
+                    <div className="optionsButtons bgGreen" onClick={()=>Newcoach()}>NEW COACH</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>Alllessons()}>ALL LESSONS</div>
+                    {/* <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div> */}
+                </div>
+    
             </div>
         )
     } else {
@@ -70,4 +72,4 @@ const Logadmin = (props) => {
 
 export default connect((state)=>(
     {logData:state.credentials}
-))(Logadmin);
+))(Admindata);
