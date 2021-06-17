@@ -7,6 +7,7 @@ import axios from 'axios';
 import Titlesection from '../../components/Titlesection/titlesection';
 // IMPORT ACTIONS
 import {LOGIN} from '../../redux/types';
+import {DESTINY} from '../../redux/types';
 // IMPORT STYLES
 import '../../assets/fontcolors.css';
 import './login.css';
@@ -87,9 +88,10 @@ const Loginer = (props) => {
                 if (logadmin.data.user.isAdmin === true){
                     // localStorage.setItem("token", logadmin.data.token);
                     // localStorage.setItem("user", JSON.stringify(logadmin.data.user));
-
+                    let showJungle = {title: "ADMIN", show: "hide"};
                     //Guardo en RDX
                     props.dispatch({type:LOGIN,payload:logadmin.data});
+                    props.dispatch({type:DESTINY,payload:showJungle});
 
                     setTimeout (()=>{
                         history.push("/logadmin")
@@ -107,7 +109,6 @@ const Loginer = (props) => {
 
         <div className="containerLogin">
             
-            <Titlesection title="LOGIN"/>
             {/* <pre>{JSON.stringify(credentials,null,2)}</pre> */}
             <div className="boxLogin bgGreen">
                 <label className="labelsLogin dinC" for="email">EMAIL</label>

@@ -5,16 +5,16 @@ import axios from 'axios';
 
 import Titlesection from '../../components/Titlesection/titlesection';
 
-import './alllessons.css';
+import './allusers.css';
 
-const Alllessons = (props) => {
+const Allusers = (props) => {
     let history = useHistory();
     // // HOOKS
     // const [userData, setUserData] = useState({
     //     token: localStorage.getItem('token'),
     //     user: JSON.parse(localStorage.getItem('user'))
     // });
-    const [lessonInfo, setLessonInfo] = useState([]);
+    const [userInfo, setUserInfo] = useState([]);
 
     useEffect(()=>{
         MyLessons();
@@ -32,9 +32,8 @@ const Alllessons = (props) => {
 
     const MyLessons = async () => {
         try{
-            let res = await axios.get('http://localhost:3005/lesson/alllessons', {headers: {'Authorization': `Basic ${props.logData.token}`}});
-            console.log("Este es el resultado ",res.data)
-            setLessonInfo(res.data)
+            let res = await axios.get('http://localhost:3005/user/allusers', {headers: {'Authorization': `Basic ${props.logData.token}`}});
+            setUserInfo(res.data)
         } catch (err) {
             console.log({message: err.message})
         }
@@ -42,17 +41,18 @@ const Alllessons = (props) => {
     if (props.logData.user.isAdmin){
 
             return (
-                <div className="lessonsContainer">
-                    <Titlesection title='ALL LESSONS'/>
-                    <div className="lessonsBox">
-                        {lessonInfo.map((lesson, index)=>(
+                <div className="usersContainer">
+                    <Titlesection title='ALL USERS'/>
+                    <div className="usersBox">
+                        {userInfo.map((users, index)=>(
                             <div className="lessonCard bgGreen txtWhite">
-                                <div className="lessonName norwester">{lesson.title}</div>
-                                <div className="lessonInfo dinC">ID: {lesson._id}</div>
-                                <div className="lessonInfo dinC">Coach: {lesson.coaches[0].name}</div>
-                                <div className="lessonInfo dinC">Date: {lesson.date}</div>
-                                <div className="lessonInfo dinC">Description: {lesson.description}</div>
-                                {/* <div className="lessonInfo dinC">Members: {lesson.members}</div> */}
+                                <div className="lessonName norwester">{users.name}</div>
+                                <div className="lessonInfo dinC">ID: {users._id}</div>
+                                <div className="lessonInfo dinC">Nick: {users.nick}</div>
+                                <div className="lessonInfo dinC">Email: {users.email}</div>
+                                <div className="lessonInfo dinC">Birthdate: {users.birthdate}</div>
+                                <div className="lessonInfo dinC">Country: {users.country}</div>
+                                <div className="lessonInfo dinC">City: {users.city}</div>
                             </div>
                         ))}
                     </div>
@@ -74,4 +74,4 @@ const Alllessons = (props) => {
 }
 export default connect((state)=>(
     {logData:state.credentials}
-))(Alllessons);
+))(Allusers);

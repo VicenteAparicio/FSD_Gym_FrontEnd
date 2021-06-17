@@ -1,7 +1,11 @@
 //IMPORT MOTORS
 import React from 'react';
 import {connect} from 'react-redux';
-import {useHistory} from 'react-router-dom';
+//IMPORT ELEMENTS
+import Alllessons from '../../containers/Alllessons/alllessons';
+import Allusers from '../../components/Allusers/allusers';
+import Newcoach from '../../containers/Newcoach/newcoach';
+
 // IMPORT ACTIONS
 import { DESTINY } from '../../redux/types';
 // IMPORT STYLE
@@ -10,12 +14,33 @@ import './visualization.css'
 
 const Visualization = (props) => {
 
-    return (
-        <div className="vistaVisual bgGreen">
-            
-        </div>
-    )
+
+    switch(props.action){
+        case "alllessons":
+            return (
+                <div className="vistaVisual">
+                    <Alllessons/>
+                </div>
+            )
+        case "newcoach":
+            return (
+                <div className="vistaVisual">
+                    <Newcoach/>
+                </div>
+            )
+        default:
+            return (
+                <div className="vistaVisual">
+                    <Allusers/>
+                </div>
+            )
+
+    }
+
+    
 
 }
 
-export default connect()(Visualization);
+export default connect((state)=>(
+    {action: state.action}
+))(Visualization);

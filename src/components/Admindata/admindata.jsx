@@ -2,8 +2,11 @@
 import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
+//IMPORT COMPONENTS
+import Titlesection from '../../components/Titlesection/titlesection';
 // IMPORT STYLE
 import './admindata.css';
+import { ACTION } from '../../redux/types';
 
 
 const Admindata = (props) => {
@@ -25,37 +28,45 @@ const Admindata = (props) => {
     // },[]);
 
     const Alllessons = () => {
-        setTimeout(()=>{
-            history.push('/alllessons');
-        }, 1000);
+
+        props.dispatch({type:ACTION,payload:'alllessons'})
+        // setTimeout(()=>{
+        //     history.push('/alllessons');
+        // }, 1000);
     }
 
     const Newcoach = () => {
-        setTimeout(()=>{
-            history.push('/newcoach');
-        }, 1000);
+        props.dispatch({type:ACTION,payload:'newcoach'})
+        // setTimeout(()=>{
+        //     history.push('/newcoach');
+        // }, 1000);
+    }
+    const Allusers = () => {
+        props.dispatch({type:ACTION,payload:'allusers'})
+        // setTimeout(()=>{
+        //     history.push('/newcoach');
+        // }, 1000);
     }
     
-    // const Logout = () => {
-    //     localStorage.clear();
-    //     setAdminData("");
-    //     history.push("/login")
-    // }
+
     if (props.logData.user?.isAdmin){
         return (
-            <div className="containerLog">
-
-                <div className="infoLog bgGreen txtWhite dinC">
-                    <div className="nameInfo">{props.logData.user.name}</div>                    
-                    <div className="dataInfo">{props.logData.user.email}</div>
-                    <div className="dataInfo">{props.logData.user.country}</div>
-                    <div className="dataInfo">{props.logData.user.city}</div>
-                    <div className="dataInfo">{props.logData.user.birthdate}</div>
-                </div>
-                <div className="infoLog txtWhite dinC">
-                    <div className="optionsButtons bgGreen" onClick={()=>Newcoach()}>NEW COACH</div>
-                    <div className="optionsButtons bgGreen" onClick={()=>Alllessons()}>ALL LESSONS</div>
-                    {/* <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div> */}
+            <div className="containerData">
+                <Titlesection title='MANAGER'/>
+                <div className="containerProfile">
+                    <div className="adminLog bgGreen txtWhite dinC">
+                        <div className="nameInfo norwester">{props.logData.user.name}</div>                    
+                        <div className="dataInfo">{props.logData.user.email}</div>
+                        <div className="dataInfo">{props.logData.user.country}</div>
+                        <div className="dataInfo">{props.logData.user.city}</div>
+                        <div className="dataInfo">{props.logData.user.birthdate}</div>
+                    </div>
+                    <div className="boxButton txtWhite dinC">
+                        <div className="optionsButtons bgGreen" onClick={()=>Newcoach()}>NEW COACH</div>
+                        <div className="optionsButtons bgGreen" onClick={()=>Alllessons()}>ALL LESSONS</div>
+                        <div className="optionsButtons bgGreen" onClick={()=>Allusers()}>ALL USERS</div>
+                        {/* <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div> */}
+                    </div>
                 </div>
     
             </div>

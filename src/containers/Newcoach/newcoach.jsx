@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import {connect} from 'react-redux';
-import Topjungle from '../../components/Topjungle/topjungle';
 import Titlesection from '../../components/Titlesection/titlesection';
 
 import '../../assets/fontcolors.css';

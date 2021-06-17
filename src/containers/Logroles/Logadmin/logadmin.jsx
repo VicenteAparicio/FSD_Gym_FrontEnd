@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import Titlesection from '../../../components/Titlesection/titlesection';
 import Admindata from '../../../components/Admindata/admindata';
 import Loginnav from '../../../components/Loginnav/loginnav';
+import Visualization from '../../../components/Visualization/visualization';
 // IMPORT STYLE
 import './logadmin.css';
 
@@ -49,9 +50,9 @@ const Logadmin = (props) => {
         return (
             <div className="containerLog">
 
-                <Titlesection title="ADMIN"/>
                 <div className="adminMenu">
                     <Admindata/>
+                    <Visualization/>
                 </div>
                 
 
