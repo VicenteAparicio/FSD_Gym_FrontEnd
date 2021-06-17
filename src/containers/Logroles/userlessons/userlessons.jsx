@@ -20,14 +20,16 @@ const Userlessons = () => {
     const [lessonInfo, setLessonInfo] = useState([]);
 
     useEffect(()=>{
-        console.log(userData.token)
-        console.log(userData.user.nick)
+   /*      console.log(userData.token)
+        console.log(userData.user.nick) */
+       /*  console.log("Hola useEffect") */
         MyLessons();
+        
     },[]);
 
     const Logout = () => {
         localStorage.clear();
-        setUserData("");
+       /*  setUserData(""); */
         history.push("/login")
     }
 
@@ -37,11 +39,13 @@ const Userlessons = () => {
 
     const MyLessons = async () => {
 
+        console.log("Entramos a MyLessons");
         let body = {
             userId : userData.user._id,
         }
 
         try{
+            console.log("A continuación viene res etc")
             let res = await axios.post('http://localhost:3005/user/all_my_lessons', body, {headers: {'Authorization': `Basic ${userData.token}`}});
             console.log("Este es el resultado ",res.data)
             setLessonInfo(res.data)
@@ -78,8 +82,9 @@ const Userlessons = () => {
             
          } else {
         setTimeout(()=>{
+            console.log("No te lo coge y te escupe a login")
             history.push("/login");
-        }, 1000)
+        }, 7000)
         return (
             <div>Cargando datos de usuario</div>
         )

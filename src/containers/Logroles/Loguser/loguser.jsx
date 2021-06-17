@@ -34,7 +34,7 @@ const Loguser = (props) => {
 
     const MyLessons = () => {
 
-        console.log("Te empuja a userlessons")
+       
         history.push("/userlessons")
 
     }
