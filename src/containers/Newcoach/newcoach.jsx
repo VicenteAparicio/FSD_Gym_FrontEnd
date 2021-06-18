@@ -105,54 +105,59 @@ const Newcoach = (props) => {
                 <Titlesection title='NEW COACH'/>
 
                 {/* <pre>{JSON.stringify(credentials,null,2)}</pre> */}
-                <div className="boxLogin bgGreen">
-                    
-                    <label className="labelsLogin" for="name">NAME</label>
-                    <input require="true" className="inputsLogin" type="text" name="name" onChange={updateCredentials} onBlur={()=>checkError("name")} placeholder="Name"/>
-                    <div>{errors.eName}</div>
-                    <label className="labelsLogin" for="nick">NICK</label>
-                    <input require="true" className="inputsLogin" type="text" name="nick" onChange={updateCredentials} onBlur={()=>checkError("nick")} placeholder="Nick"/>
-                    <div>{errors.eNick}</div>
-                    <label className="labelsLogin" for="email">EMAIL</label>
-                    <input require="true" className="inputsLogin" type="email" name="email" onChange={updateCredentials} onBlur={()=>checkError("email")} placeholder="Email"/>
-                    <div>{errors.eEmail}</div>
-                    <label className="labelsLogin" for="instagram">INSTAGRAM</label>
-                    <input require="true" className="inputsLogin" type="text" name="instagram" onChange={updateCredentials} onBlur={()=>checkError("instagram")} placeholder="Instagram"/>
-                    <div>{errors.eEmail}</div>
-                    <label className="labelsLogin" for="password">PASSWORD</label>
-                    <input require="true" className="inputsLogin" type="password" name="password" onChange={updateCredentials} onBlur={()=>checkError("password")} placeholder="Password"/>
-                    <div>{errors.ePassword}</div>
-                    <label className="labelsLogin" for="level">LEVEL</label>
-                    <input require="true" className="inputsLogin" type="text" name="level" onChange={updateCredentials} onBlur={()=>checkError("level")} placeholder="Level"/>
-                    <div>{errors.eLevel}</div>
-                    <label className="labelsLogin" for="position">POSITION</label>
-                    <input require="true" className="inputsLogin" type="text" name="position" onChange={updateCredentials} onBlur={()=>checkError("position")} placeholder="Position"/>
-                    <div>{errors.ePosition}</div>
-                    <label className="labelsLogin" for="tasks">TASKS</label>
-                    <input require="true" className="inputsLogin" type="text" name="tasks" onChange={updateCredentials} onBlur={()=>checkError("tasks")} placeholder="Tasks"/>
-                    <div>{errors.ePosition}</div>
-                    <label className="labelsLogin" for="special">SPECIAL</label>
-                    <input require="true" className="inputsLogin" type="text" name="special" onChange={updateCredentials} onBlur={()=>checkError("special")} placeholder="Special"/>
-                    <div>{errors.ePosition}</div>
-                    <label className="labelsLogin" for="birthdate">BIRTHDATE</label>
-                    <input className="inputsLogin" type="date" name="birthdate" onChange={updateCredentials} onBlur={()=>checkError("birthdate")} placeholder="Birth date"/>
-                    <div>{errors.eBirthdate}</div>
-                    <label className="labelsLogin" for="country">COUNTRY</label>
-                    <input className="inputsLogin" type="text" name="country" onChange={updateCredentials} onBlur={()=>checkError("country")} placeholder="Country"/>
-                    <div>{errors.eCountry}</div>
-                    <label className="labelsLogin" for="city">CITY</label>
-                    <input className="inputsLogin" type="text" name="city" onChange={updateCredentials} onBlur={()=>checkError("city")} placeholder="City"/>
-                    <div>{errors.eCity}</div>
+                <div className="containerNewCoach bgGreen dinC txtWhite">
+                    <div className="infoDataContainer">
+                        <div className="infoDataBox">
+                            <label className="labelNewCoach" for="name">NAME</label>
+                            <input require="true" className="inNewCoach" type="text" name="name" onChange={updateCredentials} onBlur={()=>checkError("name")} placeholder="Name"/>
+                            <div>{errors.eName}</div>
+                            <label className="labelNewCoach" for="nick">NICK</label>
+                            <input require="true" className="inNewCoach" type="text" name="nick" onChange={updateCredentials} onBlur={()=>checkError("nick")} placeholder="Nick"/>
+                            <div>{errors.eNick}</div>
+                            <label className="labelNewCoach" for="email">EMAIL</label>
+                            <input require="true" className="inNewCoach" type="email" name="email" onChange={updateCredentials} onBlur={()=>checkError("email")} placeholder="Email"/>
+                            <div>{errors.eEmail}</div>
+                            <label className="labelNewCoach" for="instagram">INSTAGRAM</label>
+                            <input require="true" className="inNewCoach" type="text" name="instagram" onChange={updateCredentials} onBlur={()=>checkError("instagram")} placeholder="Instagram"/>
+                            <div>{errors.eEmail}</div>
+                            <label className="labelNewCoach" for="password">PASSWORD</label>
+                            <input require="true" className="inNewCoach" type="password" name="password" onChange={updateCredentials} onBlur={()=>checkError("password")} placeholder="Password"/>
+                            <div>{errors.ePassword}</div>
+                            <label className="labelNewCoach" for="birthdate">BIRTHDATE</label>
+                            <input className="inNewCoach" type="date" name="birthdate" onChange={updateCredentials} onBlur={()=>checkError("birthdate")} placeholder="Birth date"/>
+                            <div>{errors.eBirthdate}</div>
+                            <label className="labelNewCoach" for="country">COUNTRY</label>
+                            <input className="inNewCoach" type="text" name="country" onChange={updateCredentials} onBlur={()=>checkError("country")} placeholder="Country"/>
+                            <div>{errors.eCountry}</div>
+                            <label className="labelNewCoach" for="city">CITY</label>
+                            <input className="inNewCoach" type="text" name="city" onChange={updateCredentials} onBlur={()=>checkError("city")} placeholder="City"/>
+                            <div>{errors.eCity}</div>
+                        </div>
+                        <div className="infoDataBox">
+                            <label className="labelNewCoach" for="level">LEVEL</label>
+                            <input require="true" className="inNewCoach" type="text" name="level" onChange={updateCredentials} onBlur={()=>checkError("level")} placeholder="Level"/>
+                            <div>{errors.eLevel}</div>
+                            <label className="labelNewCoach" for="position">POSITION</label>
+                            <input require="true" className="inNewCoach" type="text" name="position" onChange={updateCredentials} onBlur={()=>checkError("position")} placeholder="Position"/>
+                            <div>{errors.ePosition}</div>
+                            <label className="labelNewCoach" for="tasks">TASKS</label>
+                            <input require="true" className="inNewCoach" type="text" name="tasks" onChange={updateCredentials} onBlur={()=>checkError("tasks")} placeholder="Tasks"/>
+                            <div>{errors.ePosition}</div>
+                            <label className="labelNewCoach" for="special">SPECIAL</label>
+                            <input require="true" className="inNewCoach" type="text" name="special" onChange={updateCredentials} onBlur={()=>checkError("special")} placeholder="Special"/>
+                            <div>{errors.ePosition}</div>
+                        </div>
+                    </div>
         
                     
-
-                    <div className="sendButton txtGreen" onClick={()=>Registercoach()}>Register</div>
+                    <div className="buttonBox">
+                        <div className="sendButtonNC txtGreen" onClick={()=>Registercoach()}>Register</div>
                     <div>{msgError}</div>
+                    </div>
                 </div>
             </div>
         )
-        }
-
+    }
 }
 
 export default connect((state)=>(

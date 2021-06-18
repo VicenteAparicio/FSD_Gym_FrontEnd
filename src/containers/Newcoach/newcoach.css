@@ -3,7 +3,79 @@
     flex-direction: column;
     width: 100%;
 }
+.containerNewCoach{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 80%;
+    padding: 2em 2em;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+}
+.infoDataContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.infoDataBox{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4em;
+}
+.labelNewCoach{
+    font-size: 1em;
+    margin: .8em 0 .3em;
+}
 
-.labelsLogin{
-    font-family: 'DIN Condensed';
+.inNewCoach{
+    font-size: .8em;
+    padding: .5em .9em;
+    background-color: white;
+}
+
+.buttonBox{
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.sendButtonNC {
+    background-color: white;
+    font-size: 1.2em;
+    text-align: right;
+    height: 1em;
+    padding: .5em 1em;
+    cursor: pointer;
+    align-self: flex-end;
+    
+    justify-self: flex-end;
+}
+.sendButton:hover{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 950px){
+    .containerNewCoach{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .infoDataContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .infoDataBox{
+        justify-content: center;
+        align-content: center;
+        margin: 0;
+    }
+    .buttonBox{
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+        margin-top: 2em;
+    }
 }
