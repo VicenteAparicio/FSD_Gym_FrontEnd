@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 //IMPORT ELEMENTS
 import Alllessons from '../../containers/Alllessons/alllessons';
 import Allusers from '../../components/Allusers/allusers';
+import Allcoachs from '../../components/Allcoachs/allcoachs';
 import Newcoach from '../../containers/Newcoach/newcoach';
 
 // IMPORT ACTIONS
@@ -28,10 +29,24 @@ const Visualization = (props) => {
                     <Newcoach/>
                 </div>
             )
-        default:
+        case "allusers":
             return (
                 <div className="vistaVisual">
                     <Allusers/>
+                </div>
+            )
+        case "allcoachs":
+            return (
+                <div className="vistaVisual">
+                    <Allcoachs/>
+                </div>
+            )
+
+
+        default:
+            return (
+                <div className="vistaVisual">
+                    Cagando
                 </div>
             )
 

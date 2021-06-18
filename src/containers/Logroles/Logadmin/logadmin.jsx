@@ -29,17 +29,17 @@ const Logadmin = (props) => {
 
     // },[]);
 
-    const Alllessons = () => {
-        setTimeout(()=>{
-            history.push('/alllessons');
-        }, 1000);
-    }
+    // const Alllessons = () => {
+    //     setTimeout(()=>{
+    //         history.push('/alllessons');
+    //     }, 1000);
+    // }
 
-    const Newcoach = () => {
-        setTimeout(()=>{
-            history.push('/newcoach');
-        }, 1000);
-    }
+    // const Newcoach = () => {
+    //     setTimeout(()=>{
+    //         history.push('/newcoach');
+    //     }, 1000);
+    // }
     
     // const Logout = () => {
     //     localStorage.clear();

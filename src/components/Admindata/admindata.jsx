@@ -35,6 +35,14 @@ const Admindata = (props) => {
         // }, 1000);
     }
 
+    const Allcoachs = () => {
+
+        props.dispatch({type:ACTION,payload:'allcoachs'})
+        // setTimeout(()=>{
+        //     history.push('/alllessons');
+        // }, 1000);
+    }
+
     const Newcoach = () => {
         props.dispatch({type:ACTION,payload:'newcoach'})
         // setTimeout(()=>{
@@ -62,9 +70,11 @@ const Admindata = (props) => {
                         <div className="dataInfo">{props.logData.user.birthdate}</div>
                     </div>
                     <div className="boxButton txtWhite dinC">
+                        <div className="optionsButtons bgGreen" onClick={()=>Allcoachs()}>ALL COACHS</div>
                         <div className="optionsButtons bgGreen" onClick={()=>Newcoach()}>NEW COACH</div>
                         <div className="optionsButtons bgGreen" onClick={()=>Alllessons()}>ALL LESSONS</div>
                         <div className="optionsButtons bgGreen" onClick={()=>Allusers()}>ALL USERS</div>
+                        
                         {/* <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div> */}
                     </div>
                 </div>

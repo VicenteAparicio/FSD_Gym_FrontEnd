@@ -5,45 +5,45 @@ import axios from 'axios';
 
 import Titlesection from '../../components/Titlesection/titlesection';
 
-import './alllessons.css';
+import './allcoachs.css';
 
-const Alllessons = (props) => {
+const Allcoachs = (props) => {
     let history = useHistory();
     // // HOOKS
     // const [userData, setUserData] = useState({
     //     token: localStorage.getItem('token'),
     //     user: JSON.parse(localStorage.getItem('user'))
     // });
-    const [lessonInfo, setLessonInfo] = useState([]);
+    const [coachInfo, setCoachInfo] = useState([]);
 
     useEffect(()=>{
-        Alllesson();
+        Allcoach();
     },[]);
 
-    const Delete = async (lessonId) => {
+    const Delete = async (coachId) => {
         
         try{
-            console.log("userid ", lessonId)
+            console.log("coachid ", coachId)
             let body = {
-                "lessonId": lessonId
+                "coachId": coachId
             }
-            console.log("Pasamos por body ",body.lessonId)
-            let res = await axios.post('http://localhost:3005/lesson/delete', body, {headers: {'Authorization': `Basic ${props.logData.token}`}})
-            console.log(res)
+            console.log("Pasamos por body ",body.coachId)
+            let res = await axios.post('http://localhost:3005/coach/delete', body, {headers: {'Authorization': `Basic ${props.logData.token}`}})
+            console.log("este es el resultado", res)
         } catch (err) {
             console.log({message: err.message})
         }
-        Alllesson();
+        Allcoach();
     }
 
     const Showmembers = () => {
     }
 
-    const Alllesson = async () => {
+    const Allcoach = async () => {
         try{
-            let res = await axios.get('http://localhost:3005/lesson/alllessons', {headers: {'Authorization': `Basic ${props.logData.token}`}});
+            let res = await axios.get('http://localhost:3005/coach/allcoachs', {headers: {'Authorization': `Basic ${props.logData.token}`}});
             console.log("son las lecciones, ", res)
-            setLessonInfo(res.data)
+            setCoachInfo(res.data)
 
         } catch (err) {
             console.log({message: err.message})
@@ -53,27 +53,22 @@ const Alllessons = (props) => {
 
             return (
                 <div className="lessonsContainer">
-                    <Titlesection title='ALL LESSONS'/>
+                    <Titlesection title='ALL COACHS'/>
                     <div className="lessonsBox">
-                        {lessonInfo.map((lesson, index)=>(
+                        {coachInfo.map((coach, index)=>(
                             
                             <div className="lessonCard bgGreen txtWhite dinC" key={index}>
                                 <div className="lessonData"> 
-                                    <div className="lessonName">{lesson.title}</div>
-                                    <div className="lessonInfo">ID: {lesson._id}</div>
-                                    <div className="lessonInfo">Coach: {lesson.coaches[0].name}</div>
-                                    <div className="lessonInfo">Date: {lesson.date}</div>
-                                    <div className="lessonInfo">Description: {lesson.description}</div>
+                                    <div className="lessonName">{coach.name}</div>
+                                    <div className="lessonInfo">ID: {coach._id}</div>
+                                    
+                                    <div className="lessonInfo">Email: {coach.email}</div>
+                                    <div className="lessonInfo">Instagram: {coach.instagram}</div>
                                 </div>
 
-                                <div className="lessonMembers">
-                                    {lesson.members.map((members, index)=>(
-                                        <div className="lessonInfo dinC">Member: {members?.nick}</div>
-                                    ))}
-                                </div>
 
                                 <div className="containerButtonsUsers">
-                                    <div className="buttonsUsers dinC txtWhite" onClick={()=>Delete(lesson._id)}>DELETE</div>
+                                    <div className="buttonsUsers dinC txtWhite" onClick={()=>Delete(coach._id)}>DELETE</div>
                                     <div className="buttonsUsers dinC txtWhite" onClick={()=>Showmembers()}>MEMBERS</div>
                                 </div>
 
@@ -98,4 +93,4 @@ const Alllessons = (props) => {
 }
 export default connect((state)=>(
     {logData:state.credentials}
-))(Alllessons);
+))(Allcoachs);
