@@ -52,7 +52,7 @@ const Userlessons = (props) => {
 
 
     if (props.logData.user){
-
+        console.log("esto no va")
             return (
                 <div className="lessonsContainer">
                     <Topjungle id="hide" title="MANAGE LESSONS"/>
@@ -61,9 +61,9 @@ const Userlessons = (props) => {
                         {lessonInfo.map((lesson, index)=>(     
                         <div className="lessonCard bgGreen txtWhite">
                             <div className="lessonName norwester">Disciplina: {lesson.title}</div> 
-                            <div className="lessonInfo dinC">Entrenador: {lesson.coaches[0].name}</div>
+                            <div className="lessonInfo dinC">Entrenador: {lesson.coaches[0].name || "No hay ningún entrenador asociado"}</div>
                             <div className="lessonInfo dinC">Fecha: {lesson.date}</div>
-                            <div className="lessonInfo dinC">Quiénes vienen: {lesson.members}</div>
+                            <div className="lessonInfo dinC">Quiénes vienen: { lesson.members[index].nick ||  "No hay usuarios apuntados"}</div>
                         </div>
 
                      ))}
