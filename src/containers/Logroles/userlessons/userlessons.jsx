@@ -63,7 +63,10 @@ const Userlessons = (props) => {
                             <div className="lessonName norwester">Disciplina: {lesson.title}</div> 
                             <div className="lessonInfo dinC">Entrenador: {lesson.coaches[0].name || "No hay ningún entrenador asociado"}</div>
                             <div className="lessonInfo dinC">Fecha: {lesson.date}</div>
-                            <div className="lessonInfo dinC">Quiénes vienen: { lesson.members[index].nick ||  "No hay usuarios apuntados"}</div>
+                            <div className="lessonInfo dinC">{lesson.members.map((members, index)=>(
+                                <div className="lessonInfo dinC">Member: {members.nick ||  "No hay usuarios apuntados"}</div>))}
+                            </div>
+                           
                         </div>
 
                      ))}
