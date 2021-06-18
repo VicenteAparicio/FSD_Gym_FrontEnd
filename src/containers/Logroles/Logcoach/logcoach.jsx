@@ -68,7 +68,7 @@ const Logcoach = (props) => {
                 <Titlesection title='COACH'/>
                 
                 <div className="infoLog bgGreen txtWhite dinC">
-                    <div className="nameInfo norwester">{props.logData.coach.name}</div>                    
+                    <div className="nameInfo">{props.logData.coach.name}</div>                    
                     <div className="dataInfo">{props.logData.coach.level}</div>
                     <div className="dataInfo">{props.logData.coach.tasks}</div>
                     <div className="dataInfo">{props.logData.coach.instagram}</div>

@@ -39,3 +39,16 @@
     color: white;
 }
 
+.sendButtonLog{
+    background-color: white;
+    font-size: 1.2em;
+    margin: 4em 0;
+    height: 1em;
+    padding: .5em 1em;
+    cursor: pointer;
+}
+
+.sendButtonLog:hover{
+    background-color: black;
+    color:white;
+}

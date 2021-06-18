@@ -121,7 +121,7 @@ const Loginer = (props) => {
                     <option value="admin">ADMIN</option>
                 </select>
 
-                <div className="sendButton txtGreen dinC" onClick={()=>logueame()}>Login</div>
+                <div className="sendButtonLog txtGreen dinC" onClick={()=>logueame()}>Login</div>
                 <div>{msgError}</div>
             </div>
         </div>
