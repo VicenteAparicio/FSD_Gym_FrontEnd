@@ -55,7 +55,7 @@ const Admindata = (props) => {
                 <Titlesection title='MANAGER'/>
                 <div className="containerProfile">
                     <div className="adminLog bgGreen txtWhite dinC">
-                        <div className="nameInfo norwester">{props.logData.user.name}</div>                    
+                        <div className="nameInfo">{props.logData.user.name}</div>                    
                         <div className="dataInfo">{props.logData.user.email}</div>
                         <div className="dataInfo">{props.logData.user.country}</div>
                         <div className="dataInfo">{props.logData.user.city}</div>

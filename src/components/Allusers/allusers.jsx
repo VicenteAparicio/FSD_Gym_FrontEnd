@@ -17,7 +17,7 @@ const Allusers = (props) => {
     const [userInfo, setUserInfo] = useState([]);
 
     useEffect(()=>{
-        MyLessons();
+        Allusers();
     },[]);
 
     // const Logout = () => {
@@ -30,7 +30,27 @@ const Allusers = (props) => {
     //     history.push("/logadmin")
     // }
 
-    const MyLessons = async () => {
+    const Delete = async (userId) => {
+        
+        try{
+            console.log("userid ", userId)
+            let body = {
+                "userId": userId
+            }
+            console.log("Pasamos por body ",body.userId)
+            let res = await axios.post('http://localhost:3005/user/delete', body, {headers: {'Authorization': `Basic ${props.logData.token}`}})
+            console.log(res)
+        } catch (err) {
+            console.log({message: err.message})
+        }
+        Allusers();
+    }
+
+    const Modify = () => {
+        
+    }
+
+    const Allusers = async () => {
         try{
             let res = await axios.get('http://localhost:3005/user/allusers', {headers: {'Authorization': `Basic ${props.logData.token}`}});
             setUserInfo(res.data)
@@ -45,14 +65,20 @@ const Allusers = (props) => {
                     <Titlesection title='ALL USERS'/>
                     <div className="usersBox">
                         {userInfo.map((users, index)=>(
-                            <div className="lessonCard bgGreen txtWhite">
-                                <div className="lessonName norwester">{users.name}</div>
-                                <div className="lessonInfo dinC">ID: {users._id}</div>
-                                <div className="lessonInfo dinC">Nick: {users.nick}</div>
-                                <div className="lessonInfo dinC">Email: {users.email}</div>
-                                <div className="lessonInfo dinC">Birthdate: {users.birthdate}</div>
-                                <div className="lessonInfo dinC">Country: {users.country}</div>
-                                <div className="lessonInfo dinC">City: {users.city}</div>
+                            <div className="userCard bgGreen txtWhite dinC">
+                                <div className="userData">
+                                    <div className="userName ">{users.name}</div>
+                                    <div className="userInfo">ID: {users._id}</div>
+                                    <div className="userInfo">Nick: {users.nick}</div>
+                                    <div className="userInfo">Email: {users.email}</div>
+                                    <div className="userInfo">Birthdate: {users.birthdate}</div>
+                                    <div className="userInfo">Country: {users.country}</div>
+                                    <div className="userInfo">City: {users.city}</div>
+                                </div>
+                                <div className="containerButtonsUsers">
+                                    <div className="buttonsUsers dinC" onClick={()=>Delete(users._id)}>DELETE</div>
+                                    <div className="buttonsUsers dinC" onClick={()=>Modify()}>MODIFY</div>
+                                </div>
                             </div>
                         ))}
                     </div>

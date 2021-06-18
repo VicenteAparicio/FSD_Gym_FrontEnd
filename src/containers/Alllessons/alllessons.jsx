@@ -17,23 +17,31 @@ const Alllessons = (props) => {
     const [lessonInfo, setLessonInfo] = useState([]);
 
     useEffect(()=>{
-        MyLessons();
+        Alllessons();
     },[]);
 
-    // const Logout = () => {
-    //     localStorage.clear();
-    //     // setUserData("");
-    //     history.push("/login")
-    // }
+    const Delete = async (lessonId) => {
+        
+        try{
+            console.log("userid ", lessonId)
+            let body = {
+                "lessonId": lessonId
+            }
+            console.log("Pasamos por body ",body.lessonId)
+            let res = await axios.post('http://localhost:3005/lesson/delete', body, {headers: {'Authorization': `Basic ${props.logData.token}`}})
+            console.log(res)
+        } catch (err) {
+            console.log({message: err.message})
+        }
+        Alllessons();
+    }
 
-    // const Back = () => {
-    //     history.push("/logadmin")
-    // }
+    const Showmembers = () => {
+    }
 
-    const MyLessons = async () => {
+    const Alllessons = async () => {
         try{
             let res = await axios.get('http://localhost:3005/lesson/alllessons', {headers: {'Authorization': `Basic ${props.logData.token}`}});
-            console.log("Este es el resultado ",res.data)
             setLessonInfo(res.data)
         } catch (err) {
             console.log({message: err.message})
@@ -46,20 +54,34 @@ const Alllessons = (props) => {
                     <Titlesection title='ALL LESSONS'/>
                     <div className="lessonsBox">
                         {lessonInfo.map((lesson, index)=>(
-                            <div className="lessonCard bgGreen txtWhite">
-                                <div className="lessonName norwester">{lesson.title}</div>
-                                <div className="lessonInfo dinC">ID: {lesson._id}</div>
-                                <div className="lessonInfo dinC">Coach: {lesson.coaches[0].name}</div>
-                                <div className="lessonInfo dinC">Date: {lesson.date}</div>
-                                <div className="lessonInfo dinC">Description: {lesson.description}</div>
-                                {/* <div className="lessonInfo dinC">Members: {lesson.members}</div> */}
+                            
+                            <div className="lessonCard bgGreen txtWhite dinC">
+                                <div className="lessonData"> 
+                                    <div className="lessonName">{lesson.title}</div>
+                                    <div className="lessonInfo">ID: {lesson._id}</div>
+                                    <div className="lessonInfo">Coach: {lesson.coaches[0].name}</div>
+                                    <div className="lessonInfo">Date: {lesson.date}</div>
+                                    <div className="lessonInfo">Description: {lesson.description}</div>
+                                </div>
+
+                                <div className="lessonMembers">
+                                    {lesson.members.map((members, index)=>(
+                                        <div className="lessonInfo dinC">Member: {members}</div>
+                                    ))}
+                                </div>
+
+                                <div className="containerButtonsUsers">
+                                    <div className="buttonsUsers dinC txtWhite" onClick={()=>Delete(lesson._id)}>DELETE</div>
+                                    <div className="buttonsUsers dinC txtWhite" onClick={()=>Showmembers()}>MEMBERS</div>
+                                </div>
+
+                                
+                                
                             </div>
+
                         ))}
                     </div>
-                    {/* <div className="bLessonsBox">
-                        <div className="bLessons bgGreen dinC" onClick={()=>Logout()}>Logout</div>
-                        <div className="bLessons bgGreen dinC" onClick={()=>Back()}>Back</div>
-                    </div> */}
+  
                 </div>
             )
         

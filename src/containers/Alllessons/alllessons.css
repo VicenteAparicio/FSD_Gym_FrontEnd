@@ -8,43 +8,30 @@
 .lessonsBox{
     display: flex;
     flex-direction: row;
-    align-self: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2em 0;
 }
 
 .lessonCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 1em;
-    margin: 2em 2em;
-    width: 25vmax;
-    max-width: 60em;
+    width: 20em;
 }
 
 .lessonName{
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .lessonInfo{
-    line-height: 1.4em;
-    font-size: 1.5em;
+    line-height: 1.2em;
+    font-size: 1.2em;
 }
 
-.bLessonsBox{
-    display: flex;
-    align-self: center;
 
-}
-
-.bLessons{
-    color: white;
-    cursor: pointer;
-    padding: 1em 2em;
-    margin: 1em;
-    width: 5em;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.bLessons:hover{
-    color: rgb(34, 180, 177);
-    background-color: black;
-
+.lessonMembers{
+    display: none;
+    margin-top: 1em;
 }

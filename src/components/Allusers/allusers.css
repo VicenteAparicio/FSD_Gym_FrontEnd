@@ -8,4 +8,40 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 2em 0;
+}
+
+.userCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    width: 20em;
+}
+
+
+.userName{
+    font-size: 2em;
+}
+
+.userInfo{
+    line-height: 1.2em;
+    font-size: 1.2em;
+}
+
+.containerButtonsUsers{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-top: 2em;
+}
+.buttonsUsers{
+    cursor: pointer;
+    margin-left: 1em;
+}
+.buttonsUsers:first-child{
+    margin-left: 0;
+}
+
+.buttonsUsers:hover{
+    color: black;
 }
