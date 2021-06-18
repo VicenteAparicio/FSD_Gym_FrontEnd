@@ -42,7 +42,9 @@ const Alllessons = (props) => {
     const Alllessons = async () => {
         try{
             let res = await axios.get('http://localhost:3005/lesson/alllessons', {headers: {'Authorization': `Basic ${props.logData.token}`}});
+            console.log("son las lecciones, ", res)
             setLessonInfo(res.data)
+
         } catch (err) {
             console.log({message: err.message})
         }
@@ -55,7 +57,7 @@ const Alllessons = (props) => {
                     <div className="lessonsBox">
                         {lessonInfo.map((lesson, index)=>(
                             
-                            <div className="lessonCard bgGreen txtWhite dinC">
+                            <div className="lessonCard bgGreen txtWhite dinC" key={index}>
                                 <div className="lessonData"> 
                                     <div className="lessonName">{lesson.title}</div>
                                     <div className="lessonInfo">ID: {lesson._id}</div>
@@ -66,7 +68,7 @@ const Alllessons = (props) => {
 
                                 <div className="lessonMembers">
                                     {lesson.members.map((members, index)=>(
-                                        <div className="lessonInfo dinC">Member: {members}</div>
+                                        <div className="lessonInfo dinC">Member: {members?.nick}</div>
                                     ))}
                                 </div>
 
