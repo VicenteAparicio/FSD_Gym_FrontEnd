@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import {connect} from 'react-redux';
 // IMPORT COMPONENTS
 // IMPORT ACTIONS
-import {LOGOUT} from '../../redux/types';
+import {ACTION, LOGOUT} from '../../redux/types';
 // IMPORT STYLE
 import "./loginnav.css";
 
@@ -18,6 +18,7 @@ const Loginnav = (props) => {
 
     const logOut = () => {
         props.dispatch({type:LOGOUT})
+        props.dispatch({type:ACTION,payload:'login'})
 
         setTimeout(()=> {
             history.push('/');

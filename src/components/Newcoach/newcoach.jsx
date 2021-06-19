@@ -151,7 +151,7 @@ const Newcoach = (props) => {
         
                     
                     <div className="buttonBox">
-                        <div className="sendButtonNC txtGreen" onClick={()=>Registercoach()}>Register</div>
+                        <div className="sendButtonNC txtGreen" onClick={()=>Registercoach()}>REGISTER</div>
                     <div>{msgError}</div>
                     </div>
                 </div>

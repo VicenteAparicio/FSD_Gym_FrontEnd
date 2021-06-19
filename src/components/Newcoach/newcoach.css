@@ -6,8 +6,8 @@
 .containerNewCoach{
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
-    width: 80%;
+    justify-content:space-evenly;
+    width: 50%;
     padding: 2em 2em;
     margin-bottom: 2em;
     flex-wrap: wrap;
@@ -41,7 +41,7 @@
 
 .sendButtonNC {
     background-color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: right;
     height: 1em;
     padding: .5em 1em;
@@ -60,6 +60,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 80%;
     }
     .infoDataContainer{
         flex-direction: column;

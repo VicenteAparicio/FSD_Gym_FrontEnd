@@ -2,10 +2,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 //IMPORT ELEMENTS
-import Alllessons from '../../containers/Alllessons/alllessons';
-import Allusers from '../../components/Allusers/allusers';
-import Allcoachs from '../../components/Allcoachs/allcoachs';
-import Newcoach from '../../containers/Newcoach/newcoach';
+import Alllessons from '../Alllessons/alllessons';
+import Allusers from '../Allusers/allusers';
+import Allcoachs from '../Allcoachs/allcoachs';
+import Newcoach from '../Newcoach/newcoach';
 
 // IMPORT ACTIONS
 import { DESTINY } from '../../redux/types';
