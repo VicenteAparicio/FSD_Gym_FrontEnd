@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 import axios from 'axios';
 // IMPORT COMPONENTS
-import Titlesection from '../../components/Titlesection/titlesection';
+// import Titlesection from '../../components/Titlesection/titlesection';
 // IMPORT ACTIONS
 import {LOGIN} from '../../redux/types';
 import {DESTINY} from '../../redux/types';
@@ -58,8 +58,8 @@ const Loginer = (props) => {
 
                     props.dispatch({type:LOGIN,payload:loguser.data});
 
-                    console.log(loguser.data.token);
-                    console.log(JSON.stringify(loguser.data.user));
+                    // console.log(loguser.data.token);
+                    // console.log(JSON.stringify(loguser.data.user));
 
                     setTimeout (()=>{
                         history.push("/loguser")
@@ -73,8 +73,9 @@ const Loginer = (props) => {
                 if (logcoach){
                     // localStorage.setItem("tokencoach", logcoach.data.token);
                     // localStorage.setItem("coach", JSON.stringify(logcoach.data.coach));
-
+                    let showJungle = {title: "COACH", show: "hide"};
                     props.dispatch({type:LOGIN,payload:logcoach.data});
+                    props.dispatch({type:DESTINY,payload:showJungle});
 
                     setTimeout (()=>{
                         history.push("/logcoach")
@@ -97,6 +98,8 @@ const Loginer = (props) => {
                         history.push("/logadmin")
                     }, 500)
                 }
+                break;
+            default:
                 break;
 
         }

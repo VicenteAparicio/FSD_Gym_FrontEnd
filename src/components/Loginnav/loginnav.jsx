@@ -30,7 +30,7 @@ const Loginnav = (props) => {
         return (
             <div className="vistaHeader">
                 <div className="nav">
-                    <div className="tapHeader" onClick={()=>takeMe("/logadmin")}>{props.credentials?.user.name}</div>
+                    {/* <div className="tapHeader" onClick={()=>takeMe("/logadmin")}>{props.credentials?.user.name || props.credentials?.coach.name}</div> */}
                     <div className="tapHeader" onClick={()=>logOut()}>Log Out</div>
                 </div>
             </div>
@@ -50,8 +50,7 @@ const Loginnav = (props) => {
     
 }
 
-export default connect((state)=>({
+export default connect((state)=>(
     // Este "credentials:" es el que usamos arriba para cargar los datos que le hemos pasado desde redux con state.credentials.
-    credentials:state.credentials
-
-}))(Loginnav);
+    {credentials:state.credentials}
+))(Loginnav);

@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 // IMPORT COMPONENTS
-import Titlesection from '../../../components/Titlesection/titlesection';
 import Admindata from '../../../components/Admindata/admindata';
 import Loginnav from '../../../components/Loginnav/loginnav';
 import Visualization from '../../../components/Visualization/visualization';

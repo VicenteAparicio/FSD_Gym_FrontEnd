@@ -98,7 +98,7 @@ const Newcoach = (props) => {
     
 
     
-    if (props.logData.user.isAdmin == true){
+    if (props.logData.user.isAdmin === true){
         return (
 
             <div className="containerRegister">

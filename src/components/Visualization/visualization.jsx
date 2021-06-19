@@ -8,7 +8,7 @@ import Allcoachs from '../Allcoachs/allcoachs';
 import Newcoach from '../Newcoach/newcoach';
 
 // IMPORT ACTIONS
-import { DESTINY } from '../../redux/types';
+// import { DESTINY } from '../../redux/types';
 // IMPORT STYLE
 import './visualization.css'
 

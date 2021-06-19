@@ -20,6 +20,10 @@ const Allusers = (props) => {
         Allusers();
     },[]);
 
+    useEffect(()=>{
+        Allusers();
+    },);
+
     // const Logout = () => {
     //     localStorage.clear();
     //     // setUserData("");
@@ -65,7 +69,7 @@ const Allusers = (props) => {
                     <Titlesection title='ALL USERS'/>
                     <div className="usersBox">
                         {userInfo.map((users, index)=>(
-                            <div className="userCard bgGreen txtWhite dinC">
+                            <div className="userCard bgGreen txtWhite dinC" key={index}>
                                 <div className="userData">
                                     <div className="userName ">{users.name}</div>
                                     <div className="userInfo">ID: {users._id}</div>
