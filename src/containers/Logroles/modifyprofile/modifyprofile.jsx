@@ -52,7 +52,7 @@ const ModifyMyProfile = (props) => {
         
 
         try{
-            let res = await axios.post('http://localhost:3005/user/modify', body, {headers: {'Authorization': `Basic ${props.logData.token}`}});
+            let res = await axios.put('http://localhost:3005/user/modify', body, {headers: {'Authorization': `Basic ${props.logData.token}`}});
             console.log("Este es el resultado ",res.data)
             setProfileInfo(res.data)
         } catch (err) {
@@ -63,14 +63,14 @@ const ModifyMyProfile = (props) => {
 
     if (props.logData.user){
             return (
-                <div className="profileContainer">
-                    <Topjungle id="hide" title="MODIFY PROFILE"/>
-                    <Titlesection title='MODIFY PROFILE'/>
-                    <div className="profileBox">
+                <div className="lessonsContainer">
+                    <Topjungle id="hide" title="MANAGE LESSONS"/>
+                    <Titlesection title='MODIFY MY PROFILE'/>
+                    <div className="lessonsBox">
                         {profileInfo.map((lesson, index)=>(     
                         <div className="lessonCard bgGreen txtWhite">
-                            <div className="lessonName norwester">Nombre: {lesson.title}</div> 
-                            <div className="lessonInfo dinC">Nick: {lesson.coaches[0].name || "No hay ningún entrenador asociado"}</div>
+                            <div className="lessonName norwester">Disciplina: {lesson.title}</div> 
+                            <div className="lessonInfo dinC">Entrenador: {lesson.coaches[0].name || "No hay ningún entrenador asociado"}</div>
                             <div className="lessonInfo dinC">Fecha: {lesson.date}</div>
                             <div className="lessonInfo dinC">{lesson.members.map((members, index)=>(
                                 <div className="lessonInfo dinC">Member: {members.nick ||  "No hay usuarios apuntados"}</div>))}
