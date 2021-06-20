@@ -18,7 +18,7 @@ const DisplayAllCoaches = (props) => {
         user: JSON.parse(localStorage.getItem('user'))
     }); */
 
-    const [lessonInfo, setLessonInfo] = useState([]);
+    const [coachesInfo, setCoachesInfo] = useState([]);
 
     useEffect(()=>{
         Displaycoaches();
@@ -38,13 +38,13 @@ const DisplayAllCoaches = (props) => {
 
 
         let body = {
-            userId: props.logData.user._id
+            token: props.logData.user.token
         }
 
         try{
-            let res = await axios.get('http://localhost:3005/user/allcoachs');
+            let res = await axios.get('http://localhost:3005/user/allcoachs',{headers: {'Authorization': `Basic ${props.logData.token}`}} );
             console.log("Este es el resultado ",res.data)
-            setLessonInfo(res.data)
+            setCoachesInfo(res.data)
         } catch (err) {
             console.log({message: err.message})
         }
@@ -54,25 +54,26 @@ const DisplayAllCoaches = (props) => {
     if (props.logData.user){
             return (
                 <div className="lessonsContainer">
-                    <Topjungle id="hide" title="MANAGE LESSONS"/>
-                    <Titlesection title='MY LESSONS'/>
+                    <Topjungle id="hide" title="DISPLAY COACHES"/>
+                    <Titlesection title='OUR COACHES'/>
                     <div className="lessonsBox">
-                        {lessonInfo.map((lesson, index)=>(     
+                        {coachesInfo.map((lesson, index)=>(     
                         <div className="lessonCard bgGreen txtWhite">
-                            <div className="lessonName norwester">Disciplina: {lesson.title}</div> 
-                            <div className="lessonInfo dinC">Entrenador: {lesson.coaches[0].name || "No hay ningún entrenador asociado"}</div>
-                            <div className="lessonInfo dinC">Fecha: {lesson.date}</div>
-                            <div className="lessonInfo dinC">{lesson.members.map((members, index)=>(
+                            TEST TEXT
+                            <div className="lessonName norwester">NAME: {/* {lesson.title} */}</div> 
+                            <div className="lessonInfo dinC">TESTFUNCTION: {/* {lesson.coaches[0].name || "No hay ningún entrenador asociado"} */}</div>
+                            <div className="lessonInfo dinC">BLAHBLAH:{/*  {lesson.date} */}</div>
+                            {/* <div className="lessonInfo dinC">{lesson.members.map((members, index)=>(
                                 <div className="lessonInfo dinC">Member: {members.nick ||  "No hay usuarios apuntados"}</div>))}
-                            </div>
+                            </div> */}
                            
                         </div>
 
                      ))}
                     </div>
                     <div className="bLessonsBox">
-                        <div className="bLessons bgGreen dinC" onClick={()=>Logout()}>Logout</div>
-                        <div className="bLessons bgGreen dinC" onClick={()=>Back()}>Back</div>
+                        <div className="lessonCard bgGreen txtWhite" onClick={()=>Logout()}>Logout</div>
+                        <div className="lessonCard bgGreen txtWhite" onClick={()=>Back()}>Back</div>
                     </div>
                 
                 </div>
