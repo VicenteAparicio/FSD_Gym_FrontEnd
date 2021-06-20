@@ -21,7 +21,7 @@ const Loginnav = (props) => {
         props.dispatch({type:ACTION,payload:'login'})
 
         setTimeout(()=> {
-            history.push('/');
+            history.push('/login');
         },500)
         
     }

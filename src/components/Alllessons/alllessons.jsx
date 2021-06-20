@@ -74,7 +74,7 @@ const Alllessons = (props) => {
 
                                 <div className="containerButtonsUsers">
                                     <div className="buttonsUsers dinC txtWhite" onClick={()=>Delete(lesson._id)}>DELETE</div>
-                                    <div className="buttonsUsers dinC txtWhite" onClick={()=>Showmembers()}>MEMBERS</div>
+                                    {/* <div className="buttonsUsers dinC txtWhite" onClick={()=>Showmembers()}>MEMBERS</div> */}
                                 </div>
 
                                 
