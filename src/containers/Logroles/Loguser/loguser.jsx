@@ -34,10 +34,23 @@ const Loguser = (props) => {
 
     const MyLessons = () => {
 
-       
         history.push("/userlessons")
 
     }
+
+    const ModifyMyProfile = () => {
+
+        history.push("/modifyprofile")
+
+    }
+
+    const DisplayAllCoaches = () => {
+
+        history.push("/displaycoaches")
+
+    }
+
+
 
     if (props.logData.token){
         return (
@@ -54,6 +67,8 @@ const Loguser = (props) => {
                 </div>
                 <div className="infoLog txtWhite dinC">
                     <div className="optionsButtons bgGreen" onClick={()=>MyLessons()}>MY LESSONS</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>ModifyMyProfile()}>MODIFY MY PROFILE</div>
+                    <div className="optionsButtons bgGreen" onClick={()=>DisplayAllCoaches()}>ALL COACHES</div>
                     <div className="optionsButtons bgGreen" onClick={()=>Logout()}>LOGOUT</div>
                     </div>
 

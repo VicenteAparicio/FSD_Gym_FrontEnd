@@ -6,10 +6,10 @@ import {connect} from 'react-redux';
 import Topjungle from '../../../components/Topjungle/topjungle';
 import Titlesection from '../../../components/Titlesection/titlesection';
 
-import './userlessons.css';
+import './displaycoaches.css';
 import '../Loguser/loguser';
 
-const Userlessons = (props) => {
+const DisplayAllCoaches = (props) => {
 
     let history = useHistory();
 
@@ -21,7 +21,7 @@ const Userlessons = (props) => {
     const [lessonInfo, setLessonInfo] = useState([]);
 
     useEffect(()=>{
-        MyLessons();
+        Displaycoaches();
         
     },[]);
 
@@ -34,7 +34,7 @@ const Userlessons = (props) => {
         history.push("/loguser")
     }
 
-    const MyLessons = async () => {
+    const Displaycoaches = async () => {
 
 
         let body = {
@@ -42,7 +42,7 @@ const Userlessons = (props) => {
         }
 
         try{
-            let res = await axios.post('http://localhost:3005/user/all_my_lessons', body, {headers: {'Authorization': `Basic ${props.logData.token}`}});
+            let res = await axios.get('http://localhost:3005/user/allcoachs');
             console.log("Este es el resultado ",res.data)
             setLessonInfo(res.data)
         } catch (err) {
@@ -92,4 +92,4 @@ const Userlessons = (props) => {
 
 export default connect((state)=>(
     {logData:state.credentials}
-))(Userlessons);
+))(DisplayAllCoaches);

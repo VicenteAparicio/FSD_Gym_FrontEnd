@@ -22,6 +22,8 @@ import Userlessons from './containers/Logroles/userlessons/userlessons';
 
 import Coach from './containers/Coach/coach';
 import Who from './containers/Who/who';
+import modifyprofile from './containers/Logroles/modifyprofile/modifyprofile';
+import displaycoaches from './containers/Logroles/Displaycoaches/displaycoaches';
 
 
 
@@ -51,6 +53,9 @@ function App() {
             <Route path="/logadmin" exact component={Logadmin}></Route>
             <Route path="/loguser" exact component={Loguser}></Route>
             <Route path="/userlessons" exact component={Userlessons}></Route>
+            <Route path="/modifyprofile" exact component={modifyprofile}></Route>
+            <Route path="/displaycoaches" exact component={displaycoaches}></Route>
+
 
             <Route path="/coach" exact component={Coach}></Route>
             <Route path="/who" exact component={Who}></Route>
