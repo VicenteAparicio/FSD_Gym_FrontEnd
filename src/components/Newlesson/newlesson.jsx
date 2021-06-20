@@ -62,9 +62,8 @@ const Newlesson = (props) => {
         let body = {
             title: credentials.title,
             description: credentials.description,
-            cocaches: props.logData.coach._id,
+            coaches: props.logData.coach._id,
             date: credentials.date,
-            creationDate: credentials.creationDate,
             members: credentials.members,
             messages: credentials.messages,
             isActive: credentials.isActive,
@@ -76,10 +75,7 @@ const Newlesson = (props) => {
             .post('http://localhost:3005/lesson/newlesson', body, {headers: {'Authorization': `Basic ${tokenization}`}})
             .then((res)=>{
                 if (res){
-                    console.log("este es el res", res)
-                    setTimeout(()=>{
-                        history.push("/");
-                    }, 1000)
+
                 }
             })
             .catch((error)=>{

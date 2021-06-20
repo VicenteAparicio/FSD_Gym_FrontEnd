@@ -22,7 +22,7 @@ const Allusers = (props) => {
 
     useEffect(()=>{
         Allusers();
-    },);
+    });
 
     // const Logout = () => {
     //     localStorage.clear();

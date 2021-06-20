@@ -46,7 +46,7 @@ const Visualization = (props) => {
         default:
             return (
                 <div className="vistaVisual">
-                    Cagando
+                    
                 </div>
             )
 

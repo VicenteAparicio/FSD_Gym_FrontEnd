@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useHistory} from 'react-router-dom';
+// import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 
 import '../../assets/fontcolors.css';
@@ -7,7 +7,7 @@ import './register.css';
 
 const Register = () => {
 
-    let history = useHistory();
+    // let history = useHistory();
 
     // Hooks
     const [credentials, setCredentials] = useState({name:'',nick:'',email:'',password:'',birthdate:'',country:'',city:'',isAdmin:'false',isActive:'true'});
@@ -95,7 +95,7 @@ const Register = () => {
     
                 
 
-                <div className="sendButton txtGreen" onClick={()=>Registration()}>Register</div>
+                <div className="sendButton txtGreen dinC" onClick={()=>Registration()}>ACCEPT</div>
                 <div>{msgError}</div>
             </div>
         </div>

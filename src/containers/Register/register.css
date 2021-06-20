@@ -34,7 +34,7 @@
     height: 1em;
     padding: .5em 1em;
     cursor: pointer;
-    align-self: flex-end;
+    align-self: center;
 }
 .sendButton:hover{
     background-color: black;

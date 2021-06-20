@@ -45,7 +45,7 @@ const Logcoach = (props) => {
     //     setAdminData("");
     //     history.push("/login")
     // }
-    if (props.logData){
+    if (props.logData?.coach){
         return (
             <div className="containerLog">
 
@@ -55,17 +55,17 @@ const Logcoach = (props) => {
                 </div>
                 
 
-                {/* <Loginnav/> */}
+                <Loginnav/>
                 
             </div>
         )
     } else {
-        // setTimeout(()=>{
-        //     history.push("/login");
-        // }, 1000)
-        // return (
-        //     <div>Cargando datos de usuario</div>
-        // )
+        setTimeout(()=>{
+            history.push("/login");
+        }, 1000)
+        return (
+            <div>Cargando datos de usuario</div>
+        )
     }
 }
 

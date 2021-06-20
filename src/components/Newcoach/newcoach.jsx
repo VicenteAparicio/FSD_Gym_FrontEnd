@@ -77,10 +77,9 @@ const Newcoach = (props) => {
             lessons: credentials.lessons
         }
 
-        let tokenization = props.logData.token;
         
         axios
-            .post('http://localhost:3005/coach/newcoach', body, {headers: {'Authorization': `Basic ${tokenization}`}})
+            .post('http://localhost:3005/coach/newcoach', body, {headers: {'Authorization': `Basic ${props.logData.token}`}})
             .then((res)=>{
                 if (res){
                     console.log("este es el res", res)
