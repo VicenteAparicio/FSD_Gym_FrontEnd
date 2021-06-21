@@ -62,9 +62,6 @@ const DisplayAllCoaches = (props) => {
                             <div className="lessonName norwester">Name: {coach.name || "Sin nombre"}</div> 
                             <div className="lessonInfo dinC">Instagram: {coach.instagram || "No tiene Instagram"}</div>
                             <div className="lessonInfo dinC">Valoration:{coach.valoration || "Este coach aún no tiene valoraciones. Añade tú la primera!"}</div>
-                            {/* <div className="lessonInfo dinC">{lesson.members.map((members, index)=>(
-                                <div className="lessonInfo dinC">Member: {members.nick ||  "No hay usuarios apuntados"}</div>))}
-                            </div> */}
                            
                         </div>
 
