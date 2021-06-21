@@ -22,16 +22,12 @@ The technologies we used were: <br> <br>
 <img src="https://camo.githubusercontent.com/3e9f1d82233cb9a42ed30a63d093f2b4502d879301f8cce220de7f0d3b84f5bf/687474703a2f2f33636f6e31342e62697a2f636f64652f5f646174612f6a732f696e74726f2f6a732d6c6f676f2e706e67" width= "70vw" height = "70vh" >
 <img src="https://cdn.iconscout.com/icon/free/png-256/node-js-3-1174937.png" width= "70vw" height = "70vh" >
 <img src="https://ps.w.org/jwt-auth/assets/icon-256x256.png?rev=2298869" width= "70vw" height = "70vh" >
-<img src="https://cdn.substack.com/image/fetch/w_264,c_limit,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8e9aa3e7-93f3-45aa-8aac-d8acf45f33b7_256x256.png" width= "70vw" height = "70vh" >
-<!-- <img src="" width= "20vw" height = "20vh" >
-<img src="" width= "20vw" height = "20vh" >
-<img src="" width= "20vw" height = "20vh" >
-<img src="" width= "20vw" height = "20vh" >
-<img src="" width= "20vw" height = "20vh" > -->
+<img src="https://www.shareicon.net/data/256x256/2016/07/08/117367_logo_512x512.png" width= "70vw" height = "70vh" >
+<img src="https://cdn.iconscout.com/icon/free/png-256/redux-283024.png" width= "70vw" height = "70vh" >
 
 ## Project deployment
 
-Clone the project from [here]().
+Clone the project from [here](https://github.com/VicenteAparicio/ReactCrosstraining.git).
 
 Install the needed dependencies (on Bash): 
 ```
@@ -63,16 +59,12 @@ Las tecnologías empleadas fueron: <br> <br>
 <img src="https://camo.githubusercontent.com/3e9f1d82233cb9a42ed30a63d093f2b4502d879301f8cce220de7f0d3b84f5bf/687474703a2f2f33636f6e31342e62697a2f636f64652f5f646174612f6a732f696e74726f2f6a732d6c6f676f2e706e67" width= "70vw" height = "70vh" >
 <img src="https://cdn.iconscout.com/icon/free/png-256/node-js-3-1174937.png" width= "70vw" height = "70vh" >
 <img src="https://ps.w.org/jwt-auth/assets/icon-256x256.png?rev=2298869" width= "70vw" height = "70vh" >
-<img src="https://cdn.substack.com/image/fetch/w_264,c_limit,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8e9aa3e7-93f3-45aa-8aac-d8acf45f33b7_256x256.png" width= "70vw" height = "70vh" >
-<!-- <img src="" width= "50vw" height = "50vh" >
-<img src="" width= "20vw" height = "20vh" >
-<img src="" width= "20vw" height = "20vh" >
-<img src="" width= "20vw" height = "20vh" >
-<img src="" width= "20vw" height = "20vh" > -->
+<img src="https://www.shareicon.net/data/256x256/2016/07/08/117367_logo_512x512.png" width= "70vw" height = "70vh" >
+<img src="https://cdn.iconscout.com/icon/free/png-256/redux-283024.png" width= "70vw" height = "70vh" >
 
 
 
-Clona el proyecto desde [aquí]().
+Clona el proyecto desde [aquí](https://github.com/VicenteAparicio/ReactCrosstraining.git).
 
 Instala las dependencias necesarias (desde Bash): 
 ```
