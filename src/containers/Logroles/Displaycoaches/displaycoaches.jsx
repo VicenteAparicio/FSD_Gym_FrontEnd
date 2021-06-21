@@ -59,10 +59,9 @@ const DisplayAllCoaches = (props) => {
                     <div className="lessonsBox">
                         {coachesInfo.map((coach, index)=>(     
                         <div className="lessonCard bgGreen txtWhite">
-                            TEST TEXT
-                            <div className="lessonName norwester">Name: {{coach}}</div> 
-                            <div className="lessonInfo dinC">Task: {/* {lesson.coaches[0].name || "No hay ningún entrenador asociado"} */}</div>
-                            <div className="lessonInfo dinC">Valoration:{/*  {lesson.date} */}</div>
+                            <div className="lessonName norwester">Name: {coach.name || "Sin nombre"}</div> 
+                            <div className="lessonInfo dinC">Instagram: {coach.instagram || "No tiene Instagram"}</div>
+                            <div className="lessonInfo dinC">Valoration:{coach.valoration || "Este coach aún no tiene valoraciones. Añade tú la primera!"}</div>
                             {/* <div className="lessonInfo dinC">{lesson.members.map((members, index)=>(
                                 <div className="lessonInfo dinC">Member: {members.nick ||  "No hay usuarios apuntados"}</div>))}
                             </div> */}
