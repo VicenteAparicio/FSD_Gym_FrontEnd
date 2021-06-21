@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import Titlesection from '../../components/Titlesection/titlesection';
+import { ACTION } from '../../redux/types';
 
 import '../../assets/fontcolors.css';
 import './newcoach.css';

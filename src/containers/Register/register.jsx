@@ -61,9 +61,7 @@ const Register = () => {
                 console.log(error);
             });   
 
-        setTimeout(()=>{
-            history.push("/login");
-        }, 1000)
+
     }
     
 

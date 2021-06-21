@@ -54,7 +54,6 @@ const Userlessons = (props) => {
     if (props.logData.user){
             return (
                 <div className="lessonsContainer">
-                    <Topjungle id="hide" title="MANAGE LESSONS"/>
                     <Titlesection title='MY LESSONS'/>
                     <div className="lessonsBox">
                         {lessonInfo.map((lesson, index)=>(     

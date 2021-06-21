@@ -64,7 +64,6 @@ const ModifyMyProfile = (props) => {
     if (props.logData.user){
             return (
                 <div className="lessonsContainer">
-                    <Topjungle id="hide" title="MANAGE LESSONS"/>
                     <Titlesection title='MODIFY MY PROFILE'/>
                     <div className="lessonsBox">
                         {profileInfo.map((lesson, index)=>(     
