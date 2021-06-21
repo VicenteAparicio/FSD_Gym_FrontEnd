@@ -84,14 +84,13 @@ const Newcoach = (props) => {
                 if (res){
                     console.log("este es el res", res)
                     setTimeout(()=>{
-                        history.push("/");
+                        props.dispatch({type:ACTION,payload:'allcoachs'})
                     }, 1000)
                 }
             })
             .catch((error)=>{
                 console.log(error);
             });
-            
             
     }
     

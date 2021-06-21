@@ -6,6 +6,7 @@ import Titlesection from '../Titlesection/titlesection';
 
 import '../../assets/fontcolors.css';
 import './newlesson.css';
+import { ACTION } from '../../redux/types';
 
 const Newlesson = (props) => {
 
@@ -75,6 +76,9 @@ const Newlesson = (props) => {
             .post('http://localhost:3005/lesson/newlesson', body, {headers: {'Authorization': `Basic ${tokenization}`}})
             .then((res)=>{
                 if (res){
+                    setTimeout(()=>{
+                        props.dispatch({type:ACTION,payload:'alllessons'})
+                    }, 1000)
 
                 }
             })

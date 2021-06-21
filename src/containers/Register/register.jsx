@@ -60,6 +60,10 @@ const Register = () => {
             .catch((error)=>{
                 console.log(error);
             });   
+
+        setTimeout(()=>{
+            history.push("/login");
+        }, 1000)
     }
     
 
