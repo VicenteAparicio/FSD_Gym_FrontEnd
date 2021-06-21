@@ -27,7 +27,7 @@ The technologies we used were: <br> <br>
 
 ## Project deployment
 
-Clone the project from [here]().
+Clone the project from [here](https://github.com/VicenteAparicio/ReactCrosstraining.git).
 
 Install the needed dependencies (on Bash): 
 ```
@@ -64,7 +64,7 @@ Las tecnologías empleadas fueron: <br> <br>
 
 
 
-Clona el proyecto desde [aquí]().
+Clona el proyecto desde [aquí](https://github.com/VicenteAparicio/ReactCrosstraining.git).
 
 Instala las dependencias necesarias (desde Bash): 
 ```
